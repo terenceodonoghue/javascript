@@ -1,0 +1,1 @@
+# @terenceodonoghue/prettier-plugin-packagejson
