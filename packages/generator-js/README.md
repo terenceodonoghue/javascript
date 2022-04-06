@@ -1,1 +1,0 @@
-# @terenceodonoghue/generator-js

@@ -1,5 +1,5 @@
 {
-  "name": "@terenceodonoghue/generator-js",
+  "name": "@terenceodonoghue/create",
   "version": "0.0.0",
   "keywords": [
     "yeoman-generator"
@@ -7,10 +7,12 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
-    "directory": "packages/prettier-plugin-packagejson"
+    "directory": "packages/create"
   },
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "type": "module",
+  "bin": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -20,10 +22,10 @@
     "prepare": "rimraf ./dist"
   },
   "dependencies": {
+    "yeoman-environment": "^3.9.1",
     "yeoman-generator": "^5.6.1"
   },
   "devDependencies": {
-    "@types/yeoman-generator": "^5.2.9",
     "copyfiles": "^2.4.1",
     "eslint": "^8.12.0",
     "rimraf": "^3.0.2",

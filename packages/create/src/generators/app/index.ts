@@ -1,12 +1,12 @@
-import path = require('path');
-import Generator = require('yeoman-generator');
+import path from 'path';
+import Generator from 'yeoman-generator';
 
 interface Answers {
   name: string;
   workspace: string;
 }
 
-module.exports = class extends Generator {
+export default class extends Generator {
   private answers?: Answers;
 
   async prompting() {
@@ -75,4 +75,4 @@ module.exports = class extends Generator {
       'https://npm.pkg.github.com',
     ]);
   }
-};
+}
