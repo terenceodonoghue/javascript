@@ -5,14 +5,14 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["prepack", "lint"]
+        "cacheableOperations": ["build", "lint"]
       }
     }
   },
   "targetDependencies": {
-    "prepack": [
+    "build": [
       {
-        "target": "prepack",
+        "target": "build",
         "projects": "dependencies"
       }
     ]

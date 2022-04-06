@@ -1324,7 +1324,7 @@ __metadata:
     yeoman-environment: ^3.9.1
     yeoman-generator: ^5.6.1
   bin:
-    create: ./dist/index.js
+    create-terenceodonoghue: ./dist/index.js
   languageName: unknown
   linkType: soft
 
