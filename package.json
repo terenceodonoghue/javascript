@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@changesets/cli": "^2.22.0",
     "@nrwl/cli": "latest",
     "@nrwl/workspace": "latest",
     "@types/node": "^17.0.23",
