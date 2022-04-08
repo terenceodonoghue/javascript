@@ -9,6 +9,9 @@
     "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
     "directory": "packages/create"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
@@ -21,7 +24,9 @@
   "scripts": {
     "build": "tsc && copyfiles -a -u 1 \"src/generators/**/templates/*\" dist/",
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext .js,.ts --ignore-path ../../.eslintignore --max-warnings=0 ./"
+    "lint": "eslint --ext .js,.ts --ignore-path ../../.eslintignore --max-warnings=0 ./",
+    "prepack": "yarn build",
+    "prepublish": "yarn lint"
   },
   "dependencies": {
     "yeoman-environment": "^3.9.1",

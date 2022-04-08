@@ -6,6 +6,9 @@
     "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
     "directory": "packages/prettier-plugin-packagejson"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "./dist/index.js",
@@ -15,7 +18,9 @@
   "scripts": {
     "build": "tsc",
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext .js,.ts --ignore-path ../../.eslintignore --max-warnings=0 ./"
+    "lint": "eslint --ext .js,.ts --ignore-path ../../.eslintignore --max-warnings=0 ./",
+    "prepack": "yarn build",
+    "prepublish": "yarn lint"
   },
   "dependencies": {
     "sort-package-json": "^1.55.0"
@@ -28,5 +33,8 @@
   "peerDependencies": {
     "prettier": "*"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "installConfig": {
+    "hoistingLimits": "dependencies"
+  }
 }

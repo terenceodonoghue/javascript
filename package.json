@@ -1,9 +1,14 @@
 {
   "name": "javascript",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "release": "yarn nx run-many --target=prepack --all && changeset publish"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
     "@nrwl/cli": "latest",
