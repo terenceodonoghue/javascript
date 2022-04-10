@@ -6,9 +6,6 @@
     "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
     "directory": "packages/prettier-plugin-packagejson"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "./dist/index.js",
@@ -34,6 +31,9 @@
     "prettier": "*"
   },
   "packageManager": "yarn@3.2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "installConfig": {
     "hoistingLimits": "dependencies"
   }

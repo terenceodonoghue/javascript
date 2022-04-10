@@ -1597,6 +1597,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@terenceodonoghue/prettier-plugin-packagejson@npm:latest":
+  version: 1.0.1
+  resolution: "@terenceodonoghue/prettier-plugin-packagejson@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40terenceodonoghue%2Fprettier-plugin-packagejson%2F1.0.1%2F29d5ab32d4dd53d3b454b41b71c99c4863b435d745f547961b21ee367ba29f2b"
+  dependencies:
+    sort-package-json: ^1.55.0
+  peerDependencies:
+    prettier: "*"
+  checksum: b6cc8fab482778820a9532821d91246fa45fa81ccc1a5f1e87a29f7bd3746a2807b9a965897174c6cc5de192c2b7c577196ddc40c78bf7ec8872e5c032f2c363
+  languageName: node
+  linkType: hard
+
 "@terenceodonoghue/prettier-plugin-packagejson@workspace:packages/prettier-plugin-packagejson":
   version: 0.0.0-use.local
   resolution: "@terenceodonoghue/prettier-plugin-packagejson@workspace:packages/prettier-plugin-packagejson"
@@ -5065,6 +5076,7 @@ __metadata:
     "@changesets/cli": ^2.22.0
     "@nrwl/cli": latest
     "@nrwl/workspace": latest
+    "@terenceodonoghue/prettier-plugin-packagejson": latest
     "@types/node": ^17.0.23
     "@types/prettier": ^2.4.4
     "@types/yeoman-generator": ^5.2.10
