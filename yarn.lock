@@ -1597,6 +1597,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@terenceodonoghue/javascript@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@terenceodonoghue/javascript@workspace:."
+  dependencies:
+    "@changesets/cli": ^2.22.0
+    "@nrwl/cli": latest
+    "@nrwl/workspace": latest
+    "@terenceodonoghue/prettier-plugin-packagejson": latest
+    "@types/node": ^17.0.23
+    "@types/prettier": ^2.4.4
+    "@types/yeoman-generator": ^5.2.10
+    "@typescript-eslint/eslint-plugin": ^5.15.0
+    "@typescript-eslint/parser": ^5.15.0
+    eslint: ^8.12.0
+    eslint-config-airbnb-base: ^15.0.0
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-import: ^2.25.4
+    eslint-plugin-prettier: ^4.0.0
+    nx: latest
+    prettier: ^2.6.0
+  languageName: unknown
+  linkType: soft
+
 "@terenceodonoghue/prettier-plugin-packagejson@npm:latest":
   version: 1.0.1
   resolution: "@terenceodonoghue/prettier-plugin-packagejson@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40terenceodonoghue%2Fprettier-plugin-packagejson%2F1.0.1%2F29d5ab32d4dd53d3b454b41b71c99c4863b435d745f547961b21ee367ba29f2b"
@@ -5068,29 +5091,6 @@ __metadata:
   checksum: ab411cfb852d04089b2d7e25cec232421a9d3656f58784954a93cdbef6ef190e445da9c5a1a24ce018ef7ed41a08191828ea367bd9d1b0bac31465b40feeaad6
   languageName: node
   linkType: hard
-
-"javascript@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "javascript@workspace:."
-  dependencies:
-    "@changesets/cli": ^2.22.0
-    "@nrwl/cli": latest
-    "@nrwl/workspace": latest
-    "@terenceodonoghue/prettier-plugin-packagejson": latest
-    "@types/node": ^17.0.23
-    "@types/prettier": ^2.4.4
-    "@types/yeoman-generator": ^5.2.10
-    "@typescript-eslint/eslint-plugin": ^5.15.0
-    "@typescript-eslint/parser": ^5.15.0
-    eslint: ^8.12.0
-    eslint-config-airbnb-base: ^15.0.0
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-import: ^2.25.4
-    eslint-plugin-prettier: ^4.0.0
-    nx: latest
-    prettier: ^2.6.0
-  languageName: unknown
-  linkType: soft
 
 "jest-circus@npm:^27.2.2":
   version: 27.5.1

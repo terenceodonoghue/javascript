@@ -1,5 +1,5 @@
 {
-  "name": "javascript",
+  "name": "@terenceodonoghue/javascript",
   "private": true,
   "workspaces": {
     "packages": [
