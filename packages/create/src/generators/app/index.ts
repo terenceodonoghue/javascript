@@ -31,7 +31,6 @@ export default class extends Generator {
       this.templatePath('**/*'),
       this.destinationPath(),
       {
-        name: this.answers?.name,
         year: new Date().getFullYear(),
       },
       undefined,
@@ -41,11 +40,6 @@ export default class extends Generator {
 
   install() {
     this.spawnCommandSync('yarn', ['set', 'version', 'berry']);
-
-    this.spawnCommandSync('yarn', [
-      'init',
-      this.answers?.workspace ? '-w' : '-y',
-    ]);
 
     this.spawnCommandSync('yarn', [
       'config',
@@ -73,6 +67,11 @@ export default class extends Generator {
       'set',
       'npmScopes.terenceodonoghue.npmRegistryServer',
       'https://npm.pkg.github.com',
+    ]);
+
+    this.spawnCommandSync('yarn', [
+      'init',
+      this.answers?.workspace ? '-w' : '-y',
     ]);
   }
 }
