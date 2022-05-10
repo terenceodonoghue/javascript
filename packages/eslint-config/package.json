@@ -1,0 +1,25 @@
+{
+  "name": "@terenceodonoghue/eslint-config",
+  "version": "0.0.0",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/eslint-config"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": ">= 8",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-prettier": "*"
+  },
+  "packageManager": "yarn@3.2.0"
+}

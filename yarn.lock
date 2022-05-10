@@ -1597,6 +1597,53 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@terenceodonoghue/eslint-config-node@workspace:packages/eslint-config-node":
+  version: 0.0.0-use.local
+  resolution: "@terenceodonoghue/eslint-config-node@workspace:packages/eslint-config-node"
+  dependencies:
+    "@terenceodonoghue/eslint-config": "workspace:^"
+    eslint-config-airbnb-base: ^15.0.0
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": "*"
+    "@typescript-eslint/parser": "*"
+    eslint: ">= 8"
+    eslint-plugin-import: "*"
+    eslint-plugin-prettier: "*"
+  languageName: unknown
+  linkType: soft
+
+"@terenceodonoghue/eslint-config-react@workspace:packages/eslint-config-react":
+  version: 0.0.0-use.local
+  resolution: "@terenceodonoghue/eslint-config-react@workspace:packages/eslint-config-react"
+  dependencies:
+    "@terenceodonoghue/eslint-config": "workspace:^"
+    eslint-config-airbnb: ^19.0.4
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": "*"
+    "@typescript-eslint/parser": "*"
+    eslint: ">= 8"
+    eslint-plugin-import: "*"
+    eslint-plugin-jsx-a11y: "*"
+    eslint-plugin-prettier: "*"
+    eslint-plugin-react: "*"
+    eslint-plugin-react-hooks: "*"
+  languageName: unknown
+  linkType: soft
+
+"@terenceodonoghue/eslint-config@workspace:^, @terenceodonoghue/eslint-config@workspace:packages/eslint-config":
+  version: 0.0.0-use.local
+  resolution: "@terenceodonoghue/eslint-config@workspace:packages/eslint-config"
+  dependencies:
+    eslint-config-prettier: ^8.5.0
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": "*"
+    "@typescript-eslint/parser": "*"
+    eslint: ">= 8"
+    eslint-plugin-import: "*"
+    eslint-plugin-prettier: "*"
+  languageName: unknown
+  linkType: soft
+
 "@terenceodonoghue/javascript@workspace:.":
   version: 0.0.0-use.local
   resolution: "@terenceodonoghue/javascript@workspace:."
@@ -3589,6 +3636,23 @@ __metadata:
     eslint: ^7.32.0 || ^8.2.0
     eslint-plugin-import: ^2.25.2
   checksum: 38626bad2ce2859fccac86b30cd2b86c9b7d8d71d458331860861dc05290a5b198bded2f4fb89efcb9046ec48f8ab4c4fb00365ba8916f27b172671da28b93ea
+  languageName: node
+  linkType: hard
+
+"eslint-config-airbnb@npm:^19.0.4":
+  version: 19.0.4
+  resolution: "eslint-config-airbnb@npm:19.0.4"
+  dependencies:
+    eslint-config-airbnb-base: ^15.0.0
+    object.assign: ^4.1.2
+    object.entries: ^1.1.5
+  peerDependencies:
+    eslint: ^7.32.0 || ^8.2.0
+    eslint-plugin-import: ^2.25.3
+    eslint-plugin-jsx-a11y: ^6.5.1
+    eslint-plugin-react: ^7.28.0
+    eslint-plugin-react-hooks: ^4.3.0
+  checksum: 253178689c3c80eef2567e3aaf0612e18973bc9cf51d9be36074b5dd58210e8b6942200a424bcccbb81ac884e41303479ab09f251a2a97addc2de61efdc9576c
   languageName: node
   linkType: hard
 
