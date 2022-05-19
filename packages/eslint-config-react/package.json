@@ -10,6 +10,8 @@
     "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
     "directory": "packages/eslint-config-react"
   },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "./index.js",
   "dependencies": {
     "@terenceodonoghue/eslint-config": "workspace:^",

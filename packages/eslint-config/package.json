@@ -10,6 +10,8 @@
     "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
     "directory": "packages/eslint-config"
   },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "index.js",
   "dependencies": {
     "eslint-config-prettier": "^8.5.0"

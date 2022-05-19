@@ -31,9 +31,6 @@
     "prettier": "*"
   },
   "packageManager": "yarn@3.2.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "installConfig": {
     "hoistingLimits": "dependencies"
   }
