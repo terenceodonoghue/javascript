@@ -1,0 +1,24 @@
+{
+  "name": "@terenceodonoghue/convert",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/convert"
+  },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf ./dist",
+    "lint": "eslint --ext .js,.ts --ignore-path ../../.eslintignore --max-warnings=0 ./",
+    "prepack": "yarn build",
+    "prepublish": "yarn lint"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "packageManager": "yarn@3.2.0"
+}
