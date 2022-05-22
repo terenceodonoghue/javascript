@@ -13,7 +13,18 @@
     "clean": "rimraf ./dist",
     "lint": "eslint --ext .js,.ts --ignore-path ../../.eslintignore --max-warnings=0 ./",
     "prepack": "yarn build",
-    "prepublish": "yarn lint"
+    "prepublish": "yarn lint",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|ts)$": [
+        "babel-jest",
+        {
+          "rootMode": "upward"
+        }
+      ]
+    }
   },
   "devDependencies": {
     "eslint": "^8.15.0",
