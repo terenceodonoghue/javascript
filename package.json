@@ -17,6 +17,7 @@
     "@changesets/cli": "^2.22.0",
     "@nrwl/cli": "latest",
     "@nrwl/workspace": "latest",
+    "@terenceodonoghue/eslint-config-node": "workspace:^",
     "@terenceodonoghue/prettier-plugin-packagejson": "latest",
     "@types/jest": "^27.5.1",
     "@types/node": "^17.0.23",
