@@ -1,5 +1,5 @@
 export type Converter<T> = {
-  to: (unit: T) => number;
+  to: (unit: T, precision?: number) => number;
 };
 
 export type Conversion = {
