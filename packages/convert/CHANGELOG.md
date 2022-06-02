@@ -1,5 +1,11 @@
 # @terenceodonoghue/convert
 
+## 1.1.0
+
+### Minor Changes
+
+- 46d98b3: Add precision argument to convert function
+
 ## 1.0.1
 
 ### Patch Changes
