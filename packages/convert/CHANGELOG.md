@@ -1,5 +1,11 @@
 # @terenceodonoghue/convert
 
+## 1.2.0
+
+### Minor Changes
+
+- 6fda150: Add W, kW, MW power converters
+
 ## 1.1.0
 
 ### Minor Changes
