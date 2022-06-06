@@ -10,4 +10,6 @@ export type Energy = 'J' | 'Wh' | 'kWh' | 'MWh';
 
 export type Length = 'cm' | 'm' | 'km';
 
-export type Unit = Energy | Length;
+export type Power = 'W' | 'kW' | 'MW';
+
+export type Unit = Energy | Length | Power;
