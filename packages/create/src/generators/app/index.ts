@@ -65,6 +65,13 @@ export default class extends Generator {
     this.spawnCommandSync('yarn', [
       'config',
       'set',
+      'npmScopes.terenceodonoghue.npmPublishRegistry',
+      'https://npm.pkg.github.com',
+    ]);
+
+    this.spawnCommandSync('yarn', [
+      'config',
+      'set',
       'npmScopes.terenceodonoghue.npmRegistryServer',
       'https://npm.pkg.github.com',
     ]);
