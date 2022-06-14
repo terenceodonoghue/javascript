@@ -77,6 +77,22 @@ export default class extends Generator {
     ]);
 
     this.spawnCommandSync('yarn', [
+      'config',
+      'set',
+      'unsafeHttpWhitelist',
+      '--json',
+      '["localhost"]',
+    ]);
+
+    this.spawnCommandSync('yarn', ['plugin', 'import', 'interactive-tools']);
+
+    this.spawnCommandSync('yarn', ['plugin', 'import', 'version']);
+
+    if (this.answers?.workspace) {
+      this.spawnCommandSync('yarn', ['plugin', 'import', 'workspace-tools']);
+    }
+
+    this.spawnCommandSync('yarn', [
       'init',
       this.answers?.workspace ? '-w' : '-y',
     ]);
