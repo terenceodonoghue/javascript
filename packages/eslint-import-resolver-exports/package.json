@@ -1,0 +1,19 @@
+{
+  "name": "@terenceodonoghue/eslint-import-resolver-exports",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/eslint-import-resolver-exports"
+  },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "main": "./index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "resolve": "^1.22.1"
+  },
+  "packageManager": "yarn@3.2.0"
+}
