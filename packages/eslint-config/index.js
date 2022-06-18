@@ -22,6 +22,14 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
   settings: {
     'import/resolver': {
       node: {
