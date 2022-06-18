@@ -4,7 +4,8 @@ exports.interfaceVersion = 2;
 
 exports.resolve = (source) => {
   try {
-    const resolvedPath = resolve.sync(source);
+    const resolvedPath = resolve.isCore(source) ? null : resolve.sync(source);
+
     return { found: true, path: resolvedPath };
   } catch {
     return { found: false };
