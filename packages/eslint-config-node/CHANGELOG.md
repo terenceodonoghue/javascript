@@ -1,5 +1,12 @@
 # @terenceodonoghue/eslint-config-node
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [d686c95]
+  - @terenceodonoghue/eslint-config@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

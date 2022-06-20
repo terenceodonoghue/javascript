@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-config
 
+## 1.0.1
+
+### Patch Changes
+
+- d686c95: Disable @typescript-eslint/no-var-requires in JS files
+
 ## 1.0.0
 
 ### Major Changes
