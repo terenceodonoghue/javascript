@@ -9,9 +9,6 @@
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "./index.js",
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "resolve": "^1.22.1"
   },
