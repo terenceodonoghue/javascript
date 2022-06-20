@@ -18,7 +18,9 @@ exports.resolve = (source) => {
                 .pop();
 
               if (packageJson.exports[path]) {
-                packageJson.main = packageJson.exports[path];
+                packageJson.main =
+                  packageJson.exports[path].default ||
+                  packageJson.exports[path];
               }
             }
 
