@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-import-resolver-exports
 
+## 1.0.2
+
+### Patch Changes
+
+- 01c9828: Add conditional exports check
+
 ## 1.0.1
 
 ### Patch Changes
