@@ -11,10 +11,6 @@
   },
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
-  "type": "module",
-  "bin": {
-    "create-terenceodonoghue": "./dist/index.js"
-  },
   "files": [
     "dist"
   ],
