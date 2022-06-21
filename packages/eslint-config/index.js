@@ -31,10 +31,13 @@ module.exports = {
     },
   ],
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts'],
+    'import/resolver': [
+      '@terenceodonoghue/eslint-import-resolver-exports',
+      {
+        node: {
+          extensions: ['.js', '.ts'],
+        },
       },
-    },
+    ],
   },
 };

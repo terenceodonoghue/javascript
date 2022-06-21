@@ -2960,8 +2960,6 @@ __metadata:
     typescript: ^4.6.3
     yeoman-environment: ^3.9.1
     yeoman-generator: ^5.6.1
-  bin:
-    create-terenceodonoghue: ./dist/index.js
   languageName: unknown
   linkType: soft
 
@@ -3004,6 +3002,7 @@ __metadata:
   dependencies:
     eslint-config-prettier: ^8.5.0
   peerDependencies:
+    "@terenceodonoghue/eslint-import-resolver-exports": "workspace:^"
     "@typescript-eslint/eslint-plugin": "*"
     "@typescript-eslint/parser": "*"
     eslint: ">= 8"
