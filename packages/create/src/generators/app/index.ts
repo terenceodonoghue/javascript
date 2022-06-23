@@ -34,7 +34,12 @@ export default class extends Generator {
         year: new Date().getFullYear(),
       },
       undefined,
-      { globOptions: { dot: true } },
+      { globOptions: { dot: true, ignore: ['_gitignore'] } },
+    );
+
+    this.fs.copy(
+      this.templatePath('_gitignore'),
+      this.destinationPath('.gitignore'),
     );
   }
 
