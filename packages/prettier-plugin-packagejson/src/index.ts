@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { Parser } from 'prettier';
+import type { Parser } from 'prettier';
 import babel from 'prettier/parser-babel';
 import sortPackageJson from 'sort-package-json';
 
