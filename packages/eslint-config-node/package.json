@@ -14,7 +14,7 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "index.js",
   "scripts": {
-    "prepare": "rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz"
+    "build-publishable-release": "rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz"
   },
   "dependencies": {
     "@terenceodonoghue/eslint-config": "workspace:^",

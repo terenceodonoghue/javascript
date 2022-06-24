@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "yarn nx run-many --target=lint --all",
-    "release": "yarn nx run-many --target=prepack --all && changeset publish"
+    "release": "yarn nx run-many --target=build-publishable-release --all && yarn nx run-many --target=prepack --all && changeset publish"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
