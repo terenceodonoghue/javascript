@@ -2987,6 +2987,7 @@ __metadata:
   dependencies:
     "@terenceodonoghue/eslint-config": "workspace:^"
     eslint-config-airbnb: ^19.0.4
+    rimraf: ^3.0.2
   peerDependencies:
     "@typescript-eslint/eslint-plugin": "*"
     "@typescript-eslint/parser": "*"

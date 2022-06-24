@@ -13,6 +13,9 @@
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "main": "index.js",
+  "scripts": {
+    "build-publishable-release": "rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz"
+  },
   "dependencies": {
     "eslint-config-prettier": "^8.5.0"
   },
@@ -24,5 +27,8 @@
     "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "publishConfig": {
+    "directory": "_release/package"
+  }
 }
