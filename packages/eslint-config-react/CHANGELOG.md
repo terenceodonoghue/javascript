@@ -1,5 +1,12 @@
 # @terenceodonoghue/eslint-config-react
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [f88694e]
+  - @terenceodonoghue/eslint-config@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes

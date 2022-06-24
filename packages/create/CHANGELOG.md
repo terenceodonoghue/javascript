@@ -1,5 +1,12 @@
 # @terenceodonoghue/create
 
+## 1.0.4
+
+### Patch Changes
+
+- 6b96907: Update app generator script, template
+- 8a2c459: Revert package to CommonJS
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-config
 
+## 1.0.2
+
+### Patch Changes
+
+- f88694e: Add exports resolver
+
 ## 1.0.1
 
 ### Patch Changes

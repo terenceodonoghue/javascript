@@ -1,5 +1,11 @@
 # @terenceodonoghue/prettier-plugin-packagejson
 
+## 1.0.2
+
+### Patch Changes
+
+- 7592814: Fix lint error
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @terenceodonoghue/eslint-config-node
 
+## 1.0.2
+
+### Patch Changes
+
+- e9785d2: Add publish workaround to package.json
+- Updated dependencies [f88694e]
+  - @terenceodonoghue/eslint-config@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
