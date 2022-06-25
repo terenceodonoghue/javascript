@@ -3005,6 +3005,7 @@ __metadata:
   resolution: "@terenceodonoghue/eslint-config@workspace:packages/eslint-config"
   dependencies:
     eslint-config-prettier: ^8.5.0
+    rimraf: ^3.0.2
   peerDependencies:
     "@terenceodonoghue/eslint-import-resolver-exports": "workspace:^"
     "@typescript-eslint/eslint-plugin": "*"

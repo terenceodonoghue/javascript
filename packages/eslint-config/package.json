@@ -19,6 +19,9 @@
   "dependencies": {
     "eslint-config-prettier": "^8.5.0"
   },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
   "peerDependencies": {
     "@terenceodonoghue/eslint-import-resolver-exports": "workspace:^",
     "@typescript-eslint/eslint-plugin": "*",
