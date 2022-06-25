@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-config
 
+## 1.0.3
+
+### Patch Changes
+
+- 0717d1a: Update release script
+
 ## 1.0.2
 
 ### Patch Changes
