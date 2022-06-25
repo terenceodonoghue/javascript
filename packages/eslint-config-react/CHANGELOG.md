@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-config-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 634ce27: Add exports resolver
+
 ## 1.0.3
 
 ### Patch Changes
