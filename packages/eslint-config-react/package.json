@@ -24,6 +24,7 @@
     "rimraf": "^3.0.2"
   },
   "peerDependencies": {
+    "@terenceodonoghue/eslint-import-resolver-exports": "workspace:^",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": ">= 8",

@@ -37,10 +37,13 @@ module.exports = {
     'react/require-default-props': 'off',
   },
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    'import/resolver': [
+      '@terenceodonoghue/eslint-import-resolver-exports',
+      {
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
       },
-    },
+    ],
   },
 };
