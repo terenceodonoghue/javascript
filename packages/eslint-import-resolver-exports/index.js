@@ -18,26 +18,31 @@ exports.resolve = (source) => {
   }
 
   try {
-    const resolvedPath = resolve.sync(id(source), {
-      packageFilter: (pkg) => {
-        const packageJson = pkg;
-
-        if (packageJson.exports) {
-          const subpath = `.${source.split(packageJson.name).pop()}`;
-
-          if (packageJson.exports[subpath]) {
-            packageJson.main =
-              packageJson.exports[subpath].default ||
-              packageJson.exports[subpath];
-          }
-        }
-
-        return packageJson;
-      },
-    });
-
+    const resolvedPath = resolve.sync(source);
     return { found: true, path: resolvedPath };
-  } catch (error) {
-    return { found: false };
+  } catch {
+    try {
+      const resolvedPath = resolve.sync(id(source), {
+        packageFilter: (pkg) => {
+          const packageJson = pkg;
+
+          if (packageJson.exports) {
+            const subpath = `.${source.split(packageJson.name).pop()}`;
+
+            if (packageJson.exports[subpath]) {
+              packageJson.main =
+                packageJson.exports[subpath].default ||
+                packageJson.exports[subpath];
+            }
+          }
+
+          return packageJson;
+        },
+      });
+
+      return { found: true, path: resolvedPath };
+    } catch (error) {
+      return { found: false };
+    }
   }
 };
