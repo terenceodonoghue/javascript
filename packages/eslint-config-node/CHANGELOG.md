@@ -1,5 +1,14 @@
 # @terenceodonoghue/eslint-config-node
 
+## 1.0.4
+
+### Patch Changes
+
+- 4c1a671: Add import resolver to peer dependencies
+- Updated dependencies [9525a3e]
+  - @terenceodonoghue/eslint-import-resolver-exports@1.0.4
+  - @terenceodonoghue/eslint-config@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

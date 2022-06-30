@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-import-resolver-exports
 
+## 1.0.4
+
+### Patch Changes
+
+- 9525a3e: Add another path check
+
 ## 1.0.3
 
 ### Patch Changes
