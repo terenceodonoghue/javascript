@@ -1,5 +1,11 @@
 # @terenceodonoghue/eslint-config-react
 
+## 1.0.6
+
+### Patch Changes
+
+- f3f8138: Extend jsx-runtime config
+
 ## 1.0.5
 
 ### Patch Changes

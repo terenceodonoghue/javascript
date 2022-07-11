@@ -1,5 +1,11 @@
 # @terenceodonoghue/create
 
+## 1.0.5
+
+### Patch Changes
+
+- 871fc80: Update editorconfig in base app generator
+
 ## 1.0.4
 
 ### Patch Changes
