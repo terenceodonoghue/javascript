@@ -6,6 +6,7 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'airbnb/hooks',
+    'plugin:react/jsx-runtime',
     '@terenceodonoghue',
   ],
   parserOptions: {
