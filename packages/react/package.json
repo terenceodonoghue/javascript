@@ -1,0 +1,32 @@
+{
+  "name": "@terenceodonoghue/react",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/react"
+  },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "type": "module",
+  "exports": {
+    "./components": "./src/components/index.ts",
+    "./hooks": "./src/hooks/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint ./src"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "peerDependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
+}

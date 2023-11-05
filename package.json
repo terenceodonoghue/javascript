@@ -1,0 +1,16 @@
+{
+  "name": "javascript",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@terenceodonoghue/eslint-plugin-javascript": "workspace:^",
+    "@terenceodonoghue/prettier-plugin-packagejson": "workspace:^",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.15",
+    "@types/react-dom": "^19.1.9",
+    "eslint": "^9.36.0",
+    "prettier": "^3.6.2"
+  },
+  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@terenceodonoghue/prettier-plugin-packagejson",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/prettier-plugin-packagejson"
+  },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "type": "module",
+  "exports": "./index.cjs",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "sort-package-json": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "prettier": "^3.6.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
+}
