@@ -14,7 +14,7 @@ export default {
   outDir: './src/icons/out',
   plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
   replaceAttrValues: {
-    '#000': 'currentColor',
+    '#000': '{color || "currentColor"}',
   },
   svgProps: {
     width: '{`${size}rem`}',
@@ -22,7 +22,7 @@ export default {
   },
   template: ({ imports, componentName, jsx, exports }, { tpl }) => tpl`
     ${imports}
-    const ${componentName} = ({ size = 1, ...props}: SVGProps<SVGSVGElement> & { size?: number }) => ${jsx};  
+    const ${componentName} = ({ color, size = 1, ...props }: SVGProps<SVGSVGElement> & { color?: string; size?: number; }) => ${jsx};  
     ${exports}
   `,
   typescript: true,
