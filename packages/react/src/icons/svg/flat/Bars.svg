@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 17H20V19H4V17Z" fill="black"/>
+<path d="M4 11H20V13H4V11Z" fill="black"/>
+<path d="M4 5H20V7H4V5Z" fill="black"/>
+<circle cx="4" cy="6" r="1" fill="black"/>
+<circle cx="20" cy="6" r="1" fill="black"/>
+<circle cx="4" cy="12" r="1" fill="black"/>
+<circle cx="20" cy="12" r="1" fill="black"/>
+<circle cx="4" cy="18" r="1" fill="black"/>
+<circle cx="20" cy="18" r="1" fill="black"/>
+</svg>
