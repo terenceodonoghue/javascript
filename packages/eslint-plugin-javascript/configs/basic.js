@@ -5,6 +5,7 @@ const compat = new FlatCompat();
 const basic = compat.config({
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/stylistic',
     // 'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:prettier/recommended',
