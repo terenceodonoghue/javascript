@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { ElementType } from 'react';
 
-import { Container, Primitive, Styleable } from '../types.js';
+import { Container, Primitive, Themeable } from '../types.js';
 
-export interface GridProps extends Styleable, Container {
+export interface GridProps extends Container, Themeable {
   /**
    * Sets the column width (in rem)
    */

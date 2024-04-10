@@ -10,13 +10,6 @@ export type Primitive<T extends ElementType, P extends object> = {
 } & ComponentPropsWithoutRef<T> &
   P;
 
-export interface Styleable {
-  /**
-   * Defines custom styles that have access to the theme
-   */
-  sx?: Interpolation<Theme>;
-}
-
 export interface Container {
   /**
    * Sets the logical inline start and end margins (in rem)
@@ -38,4 +31,11 @@ export interface Container {
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding-block
    */
   py?: number;
+}
+
+export interface Themeable {
+  /**
+   * Defines custom styles that have access to the theme
+   */
+  sx?: Interpolation<Theme>;
 }

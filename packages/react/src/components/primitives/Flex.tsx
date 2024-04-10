@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { ElementType } from 'react';
 
-import { Container, Primitive, Styleable } from '../types.js';
+import { Container, Primitive, Themeable } from '../types.js';
 
-export interface FlexProps extends Styleable, Container {
+export interface FlexProps extends Container, Themeable {
   /**
    * Sets the gap (in rem) between rows and columns
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/gap
