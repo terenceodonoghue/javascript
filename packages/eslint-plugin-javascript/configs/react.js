@@ -10,6 +10,9 @@ const react = compat.config({
     'plugin:react-hooks/recommended',
   ],
   parser: '@typescript-eslint/parser',
+  rules: {
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
+  },
   settings: {
     react: {
       version: 'detect',
