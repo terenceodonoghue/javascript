@@ -1,10 +1,8 @@
 import '@emotion/react';
-import { CSSProperties } from 'react';
+
+import { Theme as CSSTheme } from '@terenceodonoghue/css';
 
 declare module '@emotion/react' {
-  export interface Theme {
-    font?: {
-      family?: CSSProperties['fontFamily'];
-    };
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Theme extends CSSTheme {}
 }

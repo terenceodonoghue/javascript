@@ -1,44 +1,39 @@
 /** @jsxImportSource @emotion/react */
-import { ElementType } from 'react';
+import { classes } from '@terenceodonoghue/css';
+import { display, grid } from '@terenceodonoghue/css/layout';
 
-import { Container, Primitive, Themeable } from '../types.js';
+import { Box, Container, Primitive, Section } from '../types.js';
 
-export interface GridProps extends Container, Themeable {
+interface GridProps extends Box, Container {
   /**
-   * Sets the column width (in rem)
+   * TODO:
    */
-  cw?: number;
-  /**
-   * Sets the gap (in rem) between columns
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
-   */
-  gx?: number;
-  /**
-   * Sets the gap (in rem) between rows
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
-   */
-  gy?: number;
+  filled?: number;
 }
 
-const Grid = <T extends ElementType = 'div'>({
+const Grid = <T extends Section = 'div'>({
   as,
-  cw = 1,
+  cx,
+  sx,
+  filled,
   gx = 1,
   gy = 1,
   mx = 0,
   my = 0,
   px = 0,
   py = 0,
-  sx,
   ...props
 }: Primitive<T, GridProps>) => {
-  const Element = as || 'div';
+  const Component = as || 'div';
   return (
-    <Element
+    <Component
+      className={classes(
+        cx,
+        display.grid,
+        filled ? grid.templateColumns.autoFill(filled) : null,
+      )}
       css={[
         {
-          display: 'grid',
-          gridTemplateColumns: `repeat(auto-fill, minmax(${cw}rem, 1fr))`,
           columnGap: `${gx}rem`,
           rowGap: `${gy}rem`,
           marginInline: `${mx}rem`,

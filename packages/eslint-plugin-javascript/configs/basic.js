@@ -10,6 +10,7 @@ const basic = compat.config({
     'plugin:import/typescript',
     'plugin:prettier/recommended',
   ],
+  parser: '@typescript-eslint/parser',
   overrides: [
     {
       files: ['**/*.c[jt]s'],

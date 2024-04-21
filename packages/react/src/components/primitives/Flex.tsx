@@ -1,33 +1,41 @@
 /** @jsxImportSource @emotion/react */
-import { ElementType } from 'react';
+import { classes } from '@terenceodonoghue/css';
+import { display, flex } from '@terenceodonoghue/css/layout';
 
-import { Container, Primitive, Themeable } from '../types.js';
+import { Box, Container, Primitive, Section } from '../types.js';
 
-export interface FlexProps extends Container, Themeable {
+interface FlexProps extends Box, Container {
   /**
-   * Sets the gap (in rem) between rows and columns
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+   * TODO:
    */
-  gx?: number;
+  column?: boolean;
 }
 
-const Flex = <T extends ElementType = 'div'>({
+const Flex = <T extends Section = 'div'>({
   as,
+  cx,
+  sx,
+  column,
   gx = 1,
+  gy = 1,
   mx = 0,
   my = 0,
   px = 0,
   py = 0,
-  sx,
   ...props
 }: Primitive<T, FlexProps>) => {
-  const Element = as || 'div';
+  const Component = as || 'div';
   return (
-    <Element
+    <Component
+      className={classes(
+        cx,
+        display.flex,
+        column ? flex.direction.column : flex.direction.row,
+      )}
       css={[
         {
-          display: 'flex',
-          gap: `${gx}rem`,
+          columnGap: `${gx}rem`,
+          rowGap: `${gy}rem`,
           marginInline: `${mx}rem`,
           marginBlock: `${my}rem`,
           paddingInline: `${px}rem`,

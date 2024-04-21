@@ -20,7 +20,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4"
+    "@emotion/react": "^11.11.4",
+    "@terenceodonoghue/css": "workspace:^"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",
