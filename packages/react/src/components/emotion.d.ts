@@ -3,8 +3,21 @@ import { CSSProperties } from 'react';
 
 declare module '@emotion/react' {
   export interface Theme {
-    font?: {
-      family?: CSSProperties['fontFamily'];
+    border: {
+      radius: {
+        small: CSSProperties['borderRadius'];
+      };
+    };
+    color: {
+      neutral: {
+        surface: {
+          backdrop: CSSProperties['color'];
+          elevated: CSSProperties['color'];
+        };
+      };
+    };
+    font: {
+      family: CSSProperties['fontFamily'];
     };
   }
 }
