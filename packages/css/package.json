@@ -11,7 +11,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./layout.css": "./src/layout.ts"
+    "./layout.css": "./src/layout.ts",
+    "./sizing.css": "./src/sizing.ts"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",
