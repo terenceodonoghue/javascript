@@ -2,7 +2,7 @@
  * Primitives
  */
 
-export { Base, Card, Flex, Grid } from './primitives/Container.js';
+export { Base, Card, Flex, Grid, Text } from './primitives/Container.js';
 
 /**
  * Providers
