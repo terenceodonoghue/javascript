@@ -95,10 +95,16 @@ export const justifyContent = {
   center: css({
     justifyContent: 'center',
   }),
+  end: css({
+    justifyContent: 'flex-end',
+  }),
 };
 
 export const justifyItems = {
   center: css({
     justifyItems: 'center',
+  }),
+  end: css({
+    justifyItems: 'flex-end',
   }),
 };

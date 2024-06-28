@@ -10,9 +10,7 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./layout.css": "./src/layout.ts",
-    "./sizing.css": "./src/sizing.ts"
+    ".": "./src/index.ts"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",

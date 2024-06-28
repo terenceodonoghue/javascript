@@ -1,8 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { ElementType } from 'react';
 
-import { classes } from '@terenceodonoghue/css';
-import { display } from '@terenceodonoghue/css/layout.css';
+import { classes, display, flexDirection } from '@terenceodonoghue/css';
 
 import { Container, Primitive } from '../types.js';
 
@@ -68,14 +67,18 @@ export const Flex = <T extends Section = 'div'>(
        * @see https://developer.mozilla.org/en-US/docs/Web/CSS/gap
        */
       gx?: number;
+      /**
+       * TODO:
+       */
+      column?: boolean;
     }
   >,
 ) => {
-  const { as = 'div', cx, sx, gx = 1, ...rest } = props;
+  const { as = 'div', cx, sx, gx = 1, column, ...rest } = props;
   return (
     <Base
       as={as}
-      cx={[cx, display.flex]}
+      cx={[cx, display.flex, column && flexDirection.column]}
       sx={[
         sx,
         {
