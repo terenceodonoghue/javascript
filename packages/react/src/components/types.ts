@@ -2,21 +2,12 @@
 import { ClassNamesArg, Interpolation, Theme } from '@emotion/react';
 import { ComponentPropsWithoutRef, ElementType } from 'react';
 
-export type Primitive<T extends ElementType, P extends object> = {
-  /**
-   * TODO:
-   */
-  as?: T;
-  /**
-   * Defines one or more CSS class names
-   */
-  cx?: ClassNamesArg;
-  /**
-   * Defines custom styles that have access to the theme
-   */
-  sx?: Interpolation<Theme>;
-} & ComponentPropsWithoutRef<T> &
-  P;
+export type Content = Extract<
+  ElementType,
+  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
+>;
+
+export type Section = Exclude<ElementType, Content>;
 
 export interface Container {
   /**
@@ -40,3 +31,19 @@ export interface Container {
    */
   py?: number;
 }
+
+export type Primitive<T extends ElementType, P extends object> = {
+  /**
+   * TODO:
+   */
+  as?: T;
+  /**
+   * Defines one or more CSS class names
+   */
+  cx?: ClassNamesArg;
+  /**
+   * Defines custom styles that have access to the theme
+   */
+  sx?: Interpolation<Theme>;
+} & ComponentPropsWithoutRef<T> &
+  P;
