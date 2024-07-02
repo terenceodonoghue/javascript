@@ -47,11 +47,11 @@ const Flex = <T extends Section = 'div'>({
       className={classes(cx, display.flex, column && flexDirection.column)}
       css={[
         {
-          gap: `${gx}rem`,
           marginInline: `${mx}rem`,
           marginBlock: `${my}rem`,
           paddingInline: `${px}rem`,
           paddingBlock: `${py}rem`,
+          gap: `${gx}rem`,
           alignItems: align,
           justifyContent: justify,
         },
