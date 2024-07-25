@@ -7,11 +7,6 @@ import { Container, Primitive, Section } from '../types.js';
 
 interface FlexProps extends Container {
   /**
-   * Sets the gap (in rem) between rows and columns
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/gap
-   */
-  gx?: number;
-  /**
    * TODO:
    */
   column?: boolean;
@@ -25,6 +20,11 @@ interface FlexProps extends Container {
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
    */
   justify?: CSSProperties['justifyContent'];
+  /**
+   * Sets the gap (in rem) between rows and columns
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+   */
+  gx?: number;
 }
 
 const Flex = <T extends Section = 'div'>({
@@ -47,13 +47,13 @@ const Flex = <T extends Section = 'div'>({
       className={classes(cx, display.flex, column && flexDirection.column)}
       css={[
         {
+          alignItems: align,
+          justifyContent: justify,
+          gap: `${gx}rem`,
           marginInline: `${mx}rem`,
           marginBlock: `${my}rem`,
           paddingInline: `${px}rem`,
           paddingBlock: `${py}rem`,
-          gap: `${gx}rem`,
-          alignItems: align,
-          justifyContent: justify,
         },
         sx,
       ]}

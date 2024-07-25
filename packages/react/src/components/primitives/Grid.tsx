@@ -39,13 +39,13 @@ const Grid = <T extends Section = 'div'>({
       className={classes(cx, display.grid)}
       css={[
         {
+          gridTemplateColumns: `repeat(auto-fill, minmax(${cw}rem, 1fr))`,
+          columnGap: `${gx}rem`,
+          rowGap: `${gy}rem`,
           marginInline: `${mx}rem`,
           marginBlock: `${my}rem`,
           paddingInline: `${px}rem`,
           paddingBlock: `${py}rem`,
-          gridTemplateColumns: `repeat(auto-fill, minmax(${cw}rem, 1fr))`,
-          columnGap: `${gx}rem`,
-          rowGap: `${gy}rem`,
         },
         sx,
       ]}

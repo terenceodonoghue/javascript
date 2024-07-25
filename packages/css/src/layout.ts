@@ -27,15 +27,24 @@ export const overflow = {
   hidden: css({
     overflow: 'hidden',
   }),
+  scroll: css({
+    overflow: 'scroll',
+  }),
 };
 
 export const overflowX = {
+  hidden: css({
+    overflowX: 'hidden',
+  }),
   scroll: css({
     overflowX: 'scroll',
   }),
 };
 
 export const overflowY = {
+  hidden: css({
+    overflowY: 'hidden',
+  }),
   scroll: css({
     overflowY: 'scroll',
   }),
@@ -79,15 +88,33 @@ export const flexGrow = {
   }),
 };
 
+export const flexShrink = {
+  0: css({
+    flexShrink: 0,
+  }),
+};
+
 export const alignContent = {
   center: css({
     alignContent: 'center',
+  }),
+  end: css({
+    alignContent: 'end',
+  }),
+  start: css({
+    alignContent: 'start',
   }),
 };
 
 export const alignItems = {
   center: css({
     alignItems: 'center',
+  }),
+  end: css({
+    alignItems: 'end',
+  }),
+  start: css({
+    alignItems: 'start',
   }),
 };
 
@@ -98,6 +125,9 @@ export const justifyContent = {
   end: css({
     justifyContent: 'end',
   }),
+  start: css({
+    justifyContent: 'start',
+  }),
 };
 
 export const justifyItems = {
@@ -106,5 +136,8 @@ export const justifyItems = {
   }),
   end: css({
     justifyItems: 'end',
+  }),
+  start: css({
+    justifyItems: 'start',
   }),
 };
