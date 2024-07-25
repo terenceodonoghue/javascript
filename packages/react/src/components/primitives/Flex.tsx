@@ -21,10 +21,15 @@ interface FlexProps extends Container {
    */
   justify?: CSSProperties['justifyContent'];
   /**
-   * Sets the gap (in rem) between rows and columns
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+   * Sets the gap (in rem) between columns
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
    */
   gx?: number;
+  /**
+   * Sets the gap (in rem) between rows
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
+   */
+  gy?: number;
 }
 
 const Flex = <T extends Section = 'div'>({
@@ -36,6 +41,7 @@ const Flex = <T extends Section = 'div'>({
   px = 0,
   py = 0,
   gx = 1,
+  gy = 1,
   column,
   align,
   justify,
@@ -49,7 +55,8 @@ const Flex = <T extends Section = 'div'>({
         {
           alignItems: align,
           justifyContent: justify,
-          gap: `${gx}rem`,
+          columnGap: `${gx}rem`,
+          rowGap: `${gy}rem`,
           marginInline: `${mx}rem`,
           marginBlock: `${my}rem`,
           paddingInline: `${px}rem`,
