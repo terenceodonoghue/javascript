@@ -26,7 +26,11 @@ const Flex = <T extends Section = 'div'>({
   const Component = as || 'div';
   return (
     <Component
-      className={classes(cx, display.flex, column && flexDirection.column)}
+      className={classes(
+        cx,
+        display.flex,
+        column ? flexDirection.column : flexDirection.row,
+      )}
       css={[
         {
           columnGap: `${gx}rem`,

@@ -1,14 +1,20 @@
 /** @jsxImportSource @emotion/react */
-import { classes, display } from '@terenceodonoghue/css';
+import { classes, display, gridTemplateColumns } from '@terenceodonoghue/css';
 
 import { Box, Layout, Primitive, Section } from '../types.js';
 
-interface GridProps extends Box, Layout {}
+interface GridProps extends Box, Layout {
+  /**
+   * TODO:
+   */
+  filled?: number;
+}
 
 const Grid = <T extends Section = 'div'>({
   as,
   cx,
   sx,
+  filled,
   gx = 1,
   gy = 1,
   mx = 0,
@@ -20,7 +26,11 @@ const Grid = <T extends Section = 'div'>({
   const Component = as || 'div';
   return (
     <Component
-      className={classes(cx, display.grid)}
+      className={classes(
+        cx,
+        display.grid,
+        filled ? gridTemplateColumns.autoFill(filled) : null,
+      )}
       css={[
         {
           columnGap: `${gx}rem`,
