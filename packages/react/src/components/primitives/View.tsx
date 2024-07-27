@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { classes } from '@terenceodonoghue/css';
 
-import { Container, Primitive, Section } from '../types.js';
+import { Box, Primitive, Section } from '../types.js';
 
 const View = <T extends Section = 'div'>({
   as,
@@ -12,7 +12,7 @@ const View = <T extends Section = 'div'>({
   px = 0,
   py = 0,
   ...props
-}: Primitive<T, Container>) => {
+}: Primitive<T, Box>) => {
   const Component = as || 'div';
   return (
     <Component

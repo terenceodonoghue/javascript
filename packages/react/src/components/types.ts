@@ -9,7 +9,7 @@ export type Content = Extract<
 
 export type Section = Exclude<ElementType, Content>;
 
-export interface Container {
+export interface Box {
   /**
    * Sets the logical inline start and end margins (in rem)
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
@@ -30,6 +30,19 @@ export interface Container {
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding-block
    */
   py?: number;
+}
+
+export interface Layout {
+  /**
+   * Sets the gap (in rem) between columns
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
+   */
+  gx?: number;
+  /**
+   * Sets the gap (in rem) between rows
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
+   */
+  gy?: number;
 }
 
 export type Primitive<T extends ElementType, P extends object> = {

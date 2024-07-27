@@ -1,10 +1,4 @@
 /**
- * Atoms
- */
-
-export { default as Card } from './atoms/Card.js';
-
-/**
  * Primitives
  */
 

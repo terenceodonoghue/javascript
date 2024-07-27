@@ -94,6 +94,16 @@ export const flexShrink = {
   }),
 };
 
+export const gridTemplateColumns = {
+  /**
+   * @param size sets the column width (in rem)
+   */
+  autoFill: (size: number) =>
+    css({
+      gridTemplateColumns: `repeat(auto-fill, minmax(${size}rem, 1fr))`,
+    }),
+};
+
 export const alignContent = {
   center: css({
     alignContent: 'center',

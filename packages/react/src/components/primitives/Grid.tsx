@@ -1,36 +1,20 @@
 /** @jsxImportSource @emotion/react */
 import { classes, display } from '@terenceodonoghue/css';
 
-import { Container, Primitive, Section } from '../types.js';
+import { Box, Layout, Primitive, Section } from '../types.js';
 
-interface GridProps extends Container {
-  /**
-   * Sets the column width (in rem)
-   */
-  cw?: number;
-  /**
-   * Sets the gap (in rem) between columns
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
-   */
-  gx?: number;
-  /**
-   * Sets the gap (in rem) between rows
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
-   */
-  gy?: number;
-}
+interface GridProps extends Box, Layout {}
 
 const Grid = <T extends Section = 'div'>({
   as,
   cx,
   sx,
+  gx = 1,
+  gy = 1,
   mx = 0,
   my = 0,
   px = 0,
   py = 0,
-  cw = 8,
-  gx = 1,
-  gy = 1,
   ...props
 }: Primitive<T, GridProps>) => {
   const Component = as || 'div';
@@ -39,7 +23,6 @@ const Grid = <T extends Section = 'div'>({
       className={classes(cx, display.grid)}
       css={[
         {
-          gridTemplateColumns: `repeat(auto-fill, minmax(${cw}rem, 1fr))`,
           columnGap: `${gx}rem`,
           rowGap: `${gy}rem`,
           marginInline: `${mx}rem`,

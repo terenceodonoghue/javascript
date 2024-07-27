@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { classes } from '@terenceodonoghue/css';
 
-import { Container, Content, Primitive } from '../types.js';
+import { Box, Content, Primitive } from '../types.js';
 
 const Text = <T extends Content = 'span'>({
   as,
@@ -12,7 +12,7 @@ const Text = <T extends Content = 'span'>({
   px = 0,
   py = 0,
   ...props
-}: Primitive<T, Container>) => {
+}: Primitive<T, Box>) => {
   const Component = as || 'span';
   return (
     <Component
