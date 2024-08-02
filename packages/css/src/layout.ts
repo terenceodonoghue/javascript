@@ -1,9 +1,5 @@
 import { css } from '@emotion/css';
 
-/**
- * Display
- */
-
 export const display = {
   block: css({
     display: 'block',
@@ -18,10 +14,6 @@ export const display = {
     display: 'none',
   }),
 };
-
-/**
- * Overflow
- */
 
 export const overflow = {
   hidden: css({
@@ -50,10 +42,6 @@ export const overflowY = {
   }),
 };
 
-/**
- * Position
- */
-
 export const position = {
   absolute: css({
     position: 'absolute',
@@ -66,88 +54,5 @@ export const position = {
   }),
   sticky: css({
     position: 'sticky',
-  }),
-};
-
-/**
- * Flexbox & Grid
- */
-
-export const flexDirection = {
-  column: css({
-    flexDirection: 'column',
-  }),
-  row: css({
-    flexDirection: 'row',
-  }),
-};
-
-export const flexGrow = {
-  1: css({
-    flexGrow: 1,
-  }),
-};
-
-export const flexShrink = {
-  0: css({
-    flexShrink: 0,
-  }),
-};
-
-export const gridTemplateColumns = {
-  /**
-   * @param size sets the column width (in rem)
-   */
-  autoFill: (size: number) =>
-    css({
-      gridTemplateColumns: `repeat(auto-fill, minmax(${size}rem, 1fr))`,
-    }),
-};
-
-export const alignContent = {
-  center: css({
-    alignContent: 'center',
-  }),
-  end: css({
-    alignContent: 'end',
-  }),
-  start: css({
-    alignContent: 'start',
-  }),
-};
-
-export const alignItems = {
-  center: css({
-    alignItems: 'center',
-  }),
-  end: css({
-    alignItems: 'end',
-  }),
-  start: css({
-    alignItems: 'start',
-  }),
-};
-
-export const justifyContent = {
-  center: css({
-    justifyContent: 'center',
-  }),
-  end: css({
-    justifyContent: 'end',
-  }),
-  start: css({
-    justifyContent: 'start',
-  }),
-};
-
-export const justifyItems = {
-  center: css({
-    justifyItems: 'center',
-  }),
-  end: css({
-    justifyItems: 'end',
-  }),
-  start: css({
-    justifyItems: 'start',
   }),
 };

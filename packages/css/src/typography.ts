@@ -1,8 +1,10 @@
 import { css } from '@emotion/css';
 
-/**
- * Text alignment
- */
+export const listStyleType = {
+  none: css({
+    listStyleType: 'none',
+  }),
+};
 
 export const textAlign = {
   center: css({
