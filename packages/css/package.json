@@ -10,8 +10,7 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./templates": "./src/templates/index.ts"
+    ".": "./src/index.ts"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",
