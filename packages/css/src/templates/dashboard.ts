@@ -12,7 +12,7 @@ export const dashboard = {
         "nav main"
     `,
       gridTemplateColumns: 'auto 1fr',
-      gridTemplateRows: 'min-content',
+      gridTemplateRows: 'auto 1fr',
     },
     height.screen,
     width.screen,
