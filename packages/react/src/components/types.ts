@@ -32,7 +32,7 @@ export interface Box {
   py?: number;
 }
 
-export interface Container {
+export interface Layout {
   /**
    * Sets the gap (in rem) between columns
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap

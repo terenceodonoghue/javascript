@@ -9,6 +9,6 @@ export const direction = {
   }),
 };
 
-export const grow = (flexGrow: number) => css({ flexGrow });
-
-export const shrink = (flexShrink: number) => css({ flexShrink });
+export const grow = {
+  1: css({ flexGrow: 1 }),
+};

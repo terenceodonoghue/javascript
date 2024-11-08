@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { classes } from '@terenceodonoghue/css';
-import { display, grid } from '@terenceodonoghue/css/layout';
+import { display, grid } from '@terenceodonoghue/css/styles';
 
-import { Box, Container, Primitive, Section } from '../types.js';
+import { Box, Layout, Primitive, Section } from '../types.js';
 
-interface GridProps extends Box, Container {
+interface GridProps extends Box, Layout {
   /**
    * TODO:
    */

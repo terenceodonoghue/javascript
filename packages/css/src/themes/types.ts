@@ -1,11 +1,6 @@
 import type * as CSS from 'csstype';
 
 export interface Theme {
-  border: {
-    radius: {
-      small: CSS.Properties['borderRadius'];
-    };
-  };
   color: {
     neutral: {
       surface: {

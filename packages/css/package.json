@@ -11,10 +11,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./global": "./src/global.ts",
-    "./layout": "./src/layout.ts",
-    "./sizing": "./src/sizing.ts",
-    "./themes": "./src/themes.ts"
+    "./styles": "./src/styles/index.ts",
+    "./themes": "./src/themes/index.ts"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2"
