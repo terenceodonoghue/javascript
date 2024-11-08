@@ -11,7 +11,7 @@ export default {
     return exportEntries.join('\n');
   },
   jsxRuntime: 'automatic',
-  outDir: './src/icons',
+  outDir: './src/react',
   plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
   replaceAttrValues: {
     '#000': '{fill || "currentColor"}',

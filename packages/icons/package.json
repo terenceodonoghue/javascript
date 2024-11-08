@@ -1,0 +1,24 @@
+{
+  "name": "@terenceodonoghue/icons",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/icons"
+  },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "type": "module",
+  "exports": {
+    "./react": "./src/react/index.ts"
+  },
+  "scripts": {
+    "prepare": "svgr ./svg"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0"
+  },
+  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
+}
