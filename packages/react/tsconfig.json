@@ -5,11 +5,12 @@
     "module": "Node16",
     "rootDir": "./src",
     "moduleResolution": "Node16",
+    "types": ["@testing-library/jest-dom"],
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["**/__tests__/**", "./vitest.config.ts"]
+  "exclude": ["./vitest.config.ts", "./vitest-setup.ts"]
 }

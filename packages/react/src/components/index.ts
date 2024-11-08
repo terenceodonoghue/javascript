@@ -1,4 +1,10 @@
 /**
+ * Atoms
+ */
+
+export { default as Avatar } from './atoms/Avatar.js';
+
+/**
  * Primitives
  */
 
@@ -10,4 +16,4 @@ export { default as Text } from './primitives/Text.js';
  * Providers
  */
 
-export { ThemeProvider } from '@emotion/react';
+export { default as ThemeProvider } from './providers/ThemeProvider.js';
