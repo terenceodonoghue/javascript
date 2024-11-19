@@ -2,7 +2,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import ThemeProvider from '../../providers/ThemeProvider.js';
-import Avatar from '../Avatar/Avatar.js';
+import Avatar from './Avatar.js';
 
 describe('Avatar', () => {
   afterEach(cleanup);

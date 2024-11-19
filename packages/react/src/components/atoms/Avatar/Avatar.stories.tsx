@@ -28,8 +28,8 @@ export const Size = {
 export const Type = {
   render: () => (
     <Flex cx={align.items.center}>
-      <Avatar alt="Round avatar" src={faker.image.avatar()} type="rounded" />
-      <Avatar alt="Square avatar" src={faker.image.avatar()} type="squared" />
+      <Avatar alt="Rounded avatar" src={faker.image.avatar()} type="rounded" />
+      <Avatar alt="Squared avatar" src={faker.image.avatar()} type="squared" />
     </Flex>
   ),
 };
