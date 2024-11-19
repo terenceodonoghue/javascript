@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from 'react';
 
 import { border } from '@terenceodonoghue/css/styles';
 
-interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
+export interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
   /**
    * TODO:
    */

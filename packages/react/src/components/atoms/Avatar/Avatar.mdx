@@ -1,0 +1,24 @@
+import { faker } from '@faker-js/faker';
+import { Canvas, Meta, Story } from '@storybook/blocks';
+
+import Flex from '../../primitives/Flex';
+import Avatar from './Avatar';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+An avatar component represents an object or entity, typically a user's profile picture.
+
+```javascript
+import { Avatar } from '@terenceodonoghue/react';
+```
+
+The `type` prop defines one of two styles: rounded (default) or squared. Standard [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) attributes are also supported, e.g. `alt`.
+
+<Canvas of={AvatarStories.Type} />
+
+Height and width can be customised by providing a number to the `size` prop.
+
+<Canvas of={AvatarStories.Size} />

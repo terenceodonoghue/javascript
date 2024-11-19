@@ -14,20 +14,36 @@
     "./hooks": "./src/hooks/index.ts"
   },
   "scripts": {
+    "build-storybook": "storybook build --docs",
     "lint": "eslint ./src",
+    "storybook": "storybook dev -p 6006 --docs",
     "test": "vitest"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@terenceodonoghue/css": "workspace:^"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "@storybook/addon-essentials": "^8.4.4",
+    "@storybook/blocks": "^8.4.4",
+    "@storybook/react": "^8.4.4",
+    "@storybook/react-vite": "^8.4.4",
+    "@storybook/test": "^8.4.4",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "eslint": "^8.57.1",
+    "eslint-plugin-storybook": "^0.11.1",
     "jsdom": "^25.0.1",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "storybook": "^8.4.4",
     "vitest": "^2.1.4"
   },
   "peerDependencies": {
