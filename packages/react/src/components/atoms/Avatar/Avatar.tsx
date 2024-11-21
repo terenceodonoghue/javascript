@@ -11,17 +11,17 @@ export interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
   /**
    * TODO:
    */
-  type?: 'rounded' | 'squared';
+  variant?: 'rounded' | 'squared';
 }
 
 const Avatar = ({
   alt,
   size = 2.5,
-  type = 'rounded',
+  variant = 'rounded',
   ...props
 }: AvatarProps) => {
   const style: keyof typeof border.radius =
-    type === 'rounded' ? 'circle' : 'subtle';
+    variant === 'rounded' ? 'circle' : 'subtle';
 
   return (
     <img

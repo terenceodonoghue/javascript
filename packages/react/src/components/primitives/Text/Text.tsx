@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { classes } from '@terenceodonoghue/css';
 
-import { Box, Content, Primitive } from '../types.js';
+import { Box, Content, Primitive } from '../../types.js';
 
 const Text = <T extends Content = 'span'>({
   as,

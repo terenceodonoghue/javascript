@@ -2,7 +2,7 @@
 import { classes } from '@terenceodonoghue/css';
 import { display, flex } from '@terenceodonoghue/css/styles';
 
-import { Box, Layout, Primitive, Section } from '../types.js';
+import { Box, Layout, Primitive, Section } from '../../types.js';
 
 interface FlexProps extends Box, Layout {
   /**

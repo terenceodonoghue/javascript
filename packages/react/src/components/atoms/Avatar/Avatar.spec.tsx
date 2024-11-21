@@ -1,7 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 
-import ThemeProvider from '../../providers/ThemeProvider.js';
 import Avatar from './Avatar.js';
 
 describe('Avatar', () => {
@@ -9,16 +8,14 @@ describe('Avatar', () => {
 
   describe('with alt', () => {
     it('has accessible name', () => {
-      render(<Avatar alt="Alt text" />, {
-        wrapper: ThemeProvider,
-      });
+      render(<Avatar alt="Alt text" />);
       expect(screen.getByRole('img')).toHaveAccessibleName('Alt text');
     });
   });
 
   describe('with size', () => {
     it('has height/width', () => {
-      render(<Avatar size={1} />, { wrapper: ThemeProvider });
+      render(<Avatar size={1} />);
       expect(screen.getByRole('img')).toHaveStyle({
         height: '1rem',
         width: '1rem',
@@ -26,16 +23,16 @@ describe('Avatar', () => {
     });
   });
 
-  describe('with type', () => {
+  describe('with variant', () => {
     it('has rounded style', () => {
-      render(<Avatar type="rounded" />, { wrapper: ThemeProvider });
+      render(<Avatar variant="rounded" />);
       expect(screen.getByRole('img')).toHaveStyle({
         borderRadius: '50%',
       });
     });
 
     it('has squared style', () => {
-      render(<Avatar type="squared" />, { wrapper: ThemeProvider });
+      render(<Avatar variant="squared" />);
       expect(screen.getByRole('img')).toHaveStyle({
         borderRadius: '0.375rem',
       });

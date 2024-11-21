@@ -1,0 +1,17 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as FlexStories from './Flex.stories';
+
+<Meta of={FlexStories} />
+
+# Flex
+
+Flex is a container component for arranging elements vertically or horizontally.
+
+```javascript
+import { Flex } from '@terenceodonoghue/react';
+```
+
+Use the `gx` and `gy` props to control the space between children.
+
+<Canvas of={FlexStories.Type} />

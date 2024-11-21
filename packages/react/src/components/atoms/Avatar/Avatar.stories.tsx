@@ -1,35 +1,61 @@
 import { faker } from '@faker-js/faker';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { align } from '@terenceodonoghue/css/styles';
 
-import Flex from '../../primitives/Flex.js';
+import Flex from '../../primitives/Flex/Flex.js';
 import Avatar from './Avatar.js';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-export default {
+const meta: Meta<typeof Avatar> = {
   title: '💎 UI/Atoms/Avatar',
   component: Avatar,
+  decorators: [
+    (Story) => (
+      <Flex cx={align.items.center}>
+        <Story />
+      </Flex>
+    ),
+  ],
   parameters: {
     layout: 'centered',
   },
 };
 
-export const Size = {
+export default meta;
+type Story = StoryObj<typeof Avatar>;
+
+export const Usage: Story = {
   render: () => (
-    <Flex cx={align.items.center}>
-      <Avatar src={faker.image.avatar()} size={2} />
-      <Avatar src={faker.image.avatar()} size={3} />
-      <Avatar src={faker.image.avatar()} size={4} />
-      <Avatar src={faker.image.avatar()} size={5} />
-    </Flex>
+    <>
+      <Avatar alt="Avatar 1" src={faker.image.avatar()} />
+      <Avatar alt="Avatar 2" src={faker.image.avatar()} />
+      <Avatar alt="Avatar 3" src={faker.image.avatar()} />
+    </>
   ),
 };
 
-export const Type = {
-  render: () => (
-    <Flex cx={align.items.center}>
-      <Avatar alt="Rounded avatar" src={faker.image.avatar()} type="rounded" />
-      <Avatar alt="Squared avatar" src={faker.image.avatar()} type="squared" />
-    </Flex>
+export const Sizes: Story = {
+  args: {
+    src: faker.image.avatar(),
+  },
+  render: (args) => (
+    <>
+      <Avatar size={2} {...args} />
+      <Avatar size={3} {...args} />
+      <Avatar size={4} {...args} />
+      <Avatar size={5} {...args} />
+    </>
+  ),
+};
+
+export const Variants: Story = {
+  args: {
+    src: faker.image.avatar(),
+  },
+  render: (args) => (
+    <>
+      <Avatar variant="rounded" {...args} />
+      <Avatar variant="squared" {...args} />
+    </>
   ),
 };

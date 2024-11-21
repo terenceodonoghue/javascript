@@ -1,8 +1,5 @@
-import { faker } from '@faker-js/faker';
-import { Canvas, Meta, Story } from '@storybook/blocks';
+import { Canvas, Meta } from '@storybook/blocks';
 
-import Flex from '../../primitives/Flex';
-import Avatar from './Avatar';
 import * as AvatarStories from './Avatar.stories';
 
 <Meta of={AvatarStories} />
@@ -11,14 +8,24 @@ import * as AvatarStories from './Avatar.stories';
 
 An avatar component represents an object or entity, typically a user's profile picture.
 
+## Usage
+
 ```javascript
 import { Avatar } from '@terenceodonoghue/react';
 ```
 
-The `type` prop defines one of two styles: rounded (default) or squared. Standard [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) attributes are also supported, e.g. `alt`.
+Avatars can be created using standard [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) attributes, e.g. `alt` and `src`.
 
-<Canvas of={AvatarStories.Type} />
+<Canvas of={AvatarStories.Usage} />
+
+## Sizes
 
 Height and width can be customised by providing a number (expressed as `rem`) to the `size` prop.
 
-<Canvas of={AvatarStories.Size} />
+<Canvas of={AvatarStories.Sizes} />
+
+## Variants
+
+The `variant` prop defines one of two styles: rounded (default) or squared.
+
+<Canvas of={AvatarStories.Variants} />
