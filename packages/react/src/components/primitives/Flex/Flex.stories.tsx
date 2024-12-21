@@ -15,6 +15,6 @@ const meta: Meta<typeof Flex> = {
 export default meta;
 type Story = StoryObj<typeof Flex>;
 
-export const Type: Story = {
-  render: () => <Flex cx={align.items.center}>Test</Flex>,
+export const Spacing: Story = {
+  render: () => <Flex cx={align.items.center}>TODO:</Flex>,
 };
