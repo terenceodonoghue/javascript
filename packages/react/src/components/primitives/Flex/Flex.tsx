@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
+import { ElementType } from 'react';
+
 import { classes } from '@terenceodonoghue/css';
 import { display, flex } from '@terenceodonoghue/css/styles';
 
-import { Box, Layout, Primitive, Section } from '../../types.js';
+import { Box, Layout, Primitive } from '../../types.js';
 
 interface FlexProps extends Box, Layout {
   /**
@@ -11,7 +13,7 @@ interface FlexProps extends Box, Layout {
   column?: boolean;
 }
 
-const Flex = <T extends Section = 'div'>({
+const Flex = <T extends ElementType = 'div'>({
   as,
   cx,
   sx,

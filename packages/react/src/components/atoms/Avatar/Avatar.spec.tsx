@@ -6,6 +6,11 @@ import Avatar from './Avatar.js';
 describe('Avatar', () => {
   afterEach(cleanup);
 
+  it('has accessible role', () => {
+    render(<Avatar />);
+    expect(screen.getByRole('img')).toBeInTheDocument();
+  });
+
   describe('with alt', () => {
     it('has accessible name', () => {
       render(<Avatar alt="Alt text" />);

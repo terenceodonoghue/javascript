@@ -2,13 +2,6 @@
 import { ClassNamesArg, Interpolation, Theme } from '@emotion/react';
 import { ComponentPropsWithoutRef, ElementType } from 'react';
 
-export type Content = Extract<
-  ElementType,
-  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
->;
-
-export type Section = Exclude<ElementType, Content>;
-
 export interface Box {
   /**
    * Sets the logical inline start and end margins (in rem)

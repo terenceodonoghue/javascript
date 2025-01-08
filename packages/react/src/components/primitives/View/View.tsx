@@ -1,9 +1,11 @@
 /** @jsxImportSource @emotion/react */
+import { ElementType } from 'react';
+
 import { classes } from '@terenceodonoghue/css';
 
-import { Box, Content, Primitive } from '../../types.js';
+import { Box, Primitive } from '../../types.js';
 
-const Text = <T extends Content = 'span'>({
+const View = <T extends ElementType = 'div'>({
   as,
   cx,
   sx,
@@ -31,4 +33,4 @@ const Text = <T extends Content = 'span'>({
   );
 };
 
-export default Text;
+export default View;

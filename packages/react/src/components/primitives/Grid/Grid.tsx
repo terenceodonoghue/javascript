@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
+import { ElementType } from 'react';
+
 import { classes } from '@terenceodonoghue/css';
 import { display, grid } from '@terenceodonoghue/css/styles';
 
-import { Box, Layout, Primitive, Section } from '../../types.js';
+import { Box, Layout, Primitive } from '../../types.js';
 
 interface GridProps extends Box, Layout {
   /**
@@ -11,7 +13,7 @@ interface GridProps extends Box, Layout {
   filled?: number;
 }
 
-const Grid = <T extends Section = 'div'>({
+const Grid = <T extends ElementType = 'div'>({
   as,
   cx,
   sx,

@@ -1,7 +1,8 @@
-/** @jsxImportSource @emotion/react */
 import { ComponentPropsWithoutRef } from 'react';
 
 import { border } from '@terenceodonoghue/css/styles';
+
+import View from '../../primitives/View/View.js';
 
 interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
   /**
@@ -24,10 +25,11 @@ const Avatar = ({
     variant === 'rounded' ? 'circle' : 'subtle';
 
   return (
-    <img
+    <View
+      as="img"
+      cx={border.radius[style]}
+      sx={{ height: `${size}rem`, width: `${size}rem` }}
       alt={alt}
-      className={border.radius[style]}
-      css={{ height: `${size}rem`, width: `${size}rem` }}
       {...props}
     />
   );
