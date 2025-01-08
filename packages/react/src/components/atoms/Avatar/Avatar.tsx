@@ -15,12 +15,7 @@ interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
   variant?: 'rounded' | 'squared';
 }
 
-const Avatar = ({
-  alt,
-  size = 2.5,
-  variant = 'rounded',
-  ...props
-}: AvatarProps) => {
+const Avatar = ({ size = 2.5, variant = 'rounded', ...props }: AvatarProps) => {
   const style: keyof typeof border.radius =
     variant === 'rounded' ? 'circle' : 'subtle';
 
@@ -29,7 +24,6 @@ const Avatar = ({
       as="img"
       cx={border.radius[style]}
       sx={{ height: `${size}rem`, width: `${size}rem` }}
-      alt={alt}
       {...props}
     />
   );
