@@ -15,7 +15,7 @@ const View = <T extends ElementType = 'div'>({
   py = 0,
   ...props
 }: Primitive<T, Box>) => {
-  const Component = as || 'span';
+  const Component = as || 'div';
   return (
     <Component
       className={classes(cx)}

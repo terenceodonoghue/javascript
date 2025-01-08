@@ -25,11 +25,11 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Usage: Story = {
-  render: () => (
+  render: (args) => (
     <>
-      <Avatar alt="Avatar 1" src={faker.image.avatar()} />
-      <Avatar alt="Avatar 2" src={faker.image.avatar()} />
-      <Avatar alt="Avatar 3" src={faker.image.avatar()} />
+      <Avatar alt="Avatar 1" src={faker.image.avatar()} {...args} />
+      <Avatar alt="Avatar 2" src={faker.image.avatar()} {...args} />
+      <Avatar alt="Avatar 3" src={faker.image.avatar()} {...args} />
     </>
   ),
 };

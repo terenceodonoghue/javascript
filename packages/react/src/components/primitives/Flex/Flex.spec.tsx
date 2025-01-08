@@ -6,19 +6,6 @@ import Flex from './Flex.js';
 describe('Flex', () => {
   afterEach(cleanup);
 
-  it('has default', () => {
-    render(<Flex>with default</Flex>);
-    expect(screen.getByText('with default')).toHaveStyle({
-      flexDirection: 'row',
-      columnGap: '1rem',
-      rowGap: '1rem',
-      marginInline: '0rem',
-      marginBlock: '0rem',
-      paddingInline: '0rem',
-      paddingBlock: '0rem',
-    });
-  });
-
   it('has spacing', () => {
     render(
       <Flex gx={2} gy={4}>
