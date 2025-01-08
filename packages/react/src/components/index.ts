@@ -2,7 +2,7 @@
  * Atoms
  */
 
-export { default as Avatar, type AvatarProps } from './atoms/Avatar/Avatar.js';
+export { default as Avatar } from './atoms/Avatar/Avatar.js';
 
 /**
  * Primitives
