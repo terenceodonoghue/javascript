@@ -1,6 +1,5 @@
+import { useTheme } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
-
-import { border } from '@terenceodonoghue/css/styles';
 
 import View from '../../primitives/View/View.js';
 
@@ -16,14 +15,15 @@ interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
 }
 
 const Avatar = ({ size = 2.5, variant = 'rounded', ...props }: AvatarProps) => {
-  const style: keyof typeof border.radius =
-    variant === 'rounded' ? 'circle' : 'subtle';
-
+  const { border } = useTheme();
   return (
     <View
       as="img"
-      cx={border.radius[style]}
-      sx={{ height: `${size}rem`, width: `${size}rem` }}
+      sx={{
+        borderRadius: border.radius[variant],
+        height: `${size}rem`,
+        width: `${size}rem`,
+      }}
       {...props}
     />
   );
