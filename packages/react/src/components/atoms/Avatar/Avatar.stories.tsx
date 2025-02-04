@@ -1,21 +1,11 @@
 import { faker } from '@faker-js/faker';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { align } from '@terenceodonoghue/css/styles';
-
-import Flex from '../../primitives/Flex/Flex.js';
 import Avatar from './Avatar.js';
 
 const meta: Meta<typeof Avatar> = {
   title: '💎 UI/Atoms/Avatar',
   component: Avatar,
-  decorators: [
-    (Story) => (
-      <Flex cx={align.items.center}>
-        <Story />
-      </Flex>
-    ),
-  ],
   parameters: {
     layout: 'centered',
   },
@@ -25,13 +15,10 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Usage: Story = {
-  render: (args) => (
-    <>
-      <Avatar alt="Avatar 1" src={faker.image.avatar()} {...args} />
-      <Avatar alt="Avatar 2" src={faker.image.avatar()} {...args} />
-      <Avatar alt="Avatar 3" src={faker.image.avatar()} {...args} />
-    </>
-  ),
+  args: {
+    alt: faker.lorem.sentence(),
+    src: faker.image.avatar(),
+  },
 };
 
 export const Sizes: Story = {
@@ -40,10 +27,10 @@ export const Sizes: Story = {
   },
   render: (args) => (
     <>
-      <Avatar size={2} {...args} />
-      <Avatar size={3} {...args} />
-      <Avatar size={4} {...args} />
-      <Avatar size={5} {...args} />
+      <Avatar {...args} size={2} />
+      <Avatar {...args} size={3} />
+      <Avatar {...args} size={4} />
+      <Avatar {...args} size={5} />
     </>
   ),
 };
@@ -54,8 +41,8 @@ export const Variants: Story = {
   },
   render: (args) => (
     <>
-      <Avatar variant="rounded" {...args} />
-      <Avatar variant="squared" {...args} />
+      <Avatar {...args} variant="rounded" />
+      <Avatar {...args} variant="squared" />
     </>
   ),
 };

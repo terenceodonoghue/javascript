@@ -6,6 +6,20 @@ import Flex from './Flex.js';
 describe('Flex', () => {
   afterEach(cleanup);
 
+  it('has default', () => {
+    render(<Flex>with default</Flex>);
+    expect(screen.getByText('with default')).toHaveStyle({
+      display: 'flex',
+      flexDirection: 'row',
+      columnGap: '1rem',
+      rowGap: '1rem',
+      marginInline: '0rem',
+      marginBlock: '0rem',
+      paddingInline: '0rem',
+      paddingBlock: '0rem',
+    });
+  });
+
   it('has spacing', () => {
     render(
       <Flex gx={2} gy={4}>
@@ -59,13 +73,6 @@ describe('Flex', () => {
       render(<Flex column>with column</Flex>);
       expect(screen.getByText('with column')).toHaveStyle({
         flexDirection: 'column',
-      });
-    });
-
-    it('is row', () => {
-      render(<Flex column={false}>without column</Flex>);
-      expect(screen.getByText('without column')).toHaveStyle({
-        flexDirection: 'row',
       });
     });
   });

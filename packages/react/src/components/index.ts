@@ -13,3 +13,9 @@ export { default as Flex } from './primitives/Flex/Flex.js';
 export { default as Grid } from './primitives/Grid/Grid.js';
 export { default as Text } from './primitives/Text/Text.js';
 export { default as View } from './primitives/View/View.js';
+
+/**
+ * Providers
+ */
+
+export { ThemeProvider } from '@emotion/react';
