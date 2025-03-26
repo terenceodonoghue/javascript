@@ -1,6 +1,6 @@
-import { Theme } from './types.js';
+import { Theme } from '../types.js';
 
-export const light: Theme = {
+const minimal: Theme = {
   border: {
     radius: {
       rounded: '50%',
@@ -19,3 +19,5 @@ export const light: Theme = {
     family: 'system-ui',
   },
 };
+
+export default minimal;

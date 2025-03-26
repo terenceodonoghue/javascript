@@ -3,15 +3,12 @@
     "target": "ES2016",
     "jsx": "react-jsx",
     "module": "Node16",
-    "rootDirs": ["./.storybook", "./src"],
+    "rootDir": "./src",
     "moduleResolution": "Node16",
-    "types": ["@testing-library/jest-dom"],
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
-  },
-  "include": [".storybook/**/*", "src"],
-  "exclude": ["./vitest.config.ts", "./vitest-setup.ts"]
+  }
 }

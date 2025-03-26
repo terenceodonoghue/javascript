@@ -1,7 +1,9 @@
 import { useTheme } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
 
-import View from '../../primitives/View/View.js';
+import { rem } from '@terenceodonoghue/css';
+
+import Component from '../Component.js';
 
 interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
   /**
@@ -17,12 +19,12 @@ interface AvatarProps extends ComponentPropsWithoutRef<'img'> {
 const Avatar = ({ size = 2.5, variant = 'rounded', ...props }: AvatarProps) => {
   const { border } = useTheme();
   return (
-    <View
+    <Component
       as="img"
       sx={{
         borderRadius: border.radius[variant],
-        height: `${size}rem`,
-        width: `${size}rem`,
+        height: rem(size),
+        width: rem(size),
       }}
       {...props}
     />

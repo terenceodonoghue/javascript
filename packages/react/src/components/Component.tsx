@@ -1,8 +1,14 @@
-/// <reference types="./emotion.d.ts" />
-import { ClassNamesArg, Interpolation, Theme } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
+import { Interpolation, Theme } from '@emotion/react';
 import { ComponentPropsWithoutRef, ElementType } from 'react';
 
-export interface Box {
+import { rem } from '@terenceodonoghue/css';
+
+type ComponentProps<T extends ElementType> = {
+  /**
+   * TODO:
+   */
+  as?: T;
   /**
    * Sets the logical inline start and end margins (in rem)
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
@@ -23,33 +29,36 @@ export interface Box {
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding-block
    */
   py?: number;
-}
-
-export interface Layout {
-  /**
-   * Sets the gap (in rem) between columns
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
-   */
-  gx?: number;
-  /**
-   * Sets the gap (in rem) between rows
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
-   */
-  gy?: number;
-}
-
-export type Primitive<T extends ElementType, P extends object> = {
-  /**
-   * TODO:
-   */
-  as?: T;
-  /**
-   * Defines one or more CSS class names
-   */
-  cx?: ClassNamesArg;
   /**
    * Defines custom styles that have access to the theme
    */
   sx?: Interpolation<Theme>;
-} & ComponentPropsWithoutRef<T> &
-  P;
+} & ComponentPropsWithoutRef<T>;
+
+const Component = <T extends ElementType = 'div'>({
+  as,
+  sx,
+  mx,
+  my,
+  px,
+  py,
+  ...props
+}: ComponentProps<T>) => {
+  const Element = as || 'div';
+  return (
+    <Element
+      css={[
+        {
+          marginInline: rem(mx),
+          marginBlock: rem(my),
+          paddingInline: rem(px),
+          paddingBlock: rem(py),
+        },
+        sx,
+      ]}
+      {...props}
+    />
+  );
+};
+
+export default Component;
