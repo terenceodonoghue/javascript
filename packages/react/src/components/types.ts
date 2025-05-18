@@ -1,14 +1,19 @@
-/** @jsxImportSource @emotion/react */
 import { Interpolation, Theme } from '@emotion/react';
 import { ComponentPropsWithoutRef, ElementType } from 'react';
 
-import { rem } from '@terenceodonoghue/css';
-
-type ComponentProps<T extends ElementType> = {
+export type Primitive<T extends ElementType, P extends object> = {
   /**
    * TODO:
    */
   as?: T;
+  /**
+   * Defines custom styles that have access to the theme
+   */
+  sx?: Interpolation<Theme>;
+} & ComponentPropsWithoutRef<T> &
+  P;
+
+export interface Box {
   /**
    * Sets the logical inline start and end margins (in rem)
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
@@ -29,36 +34,17 @@ type ComponentProps<T extends ElementType> = {
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding-block
    */
   py?: number;
+}
+
+export interface Layout {
   /**
-   * Defines custom styles that have access to the theme
+   * Sets the size of the gap (gutter) between an element's columns (in rem)
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
    */
-  sx?: Interpolation<Theme>;
-} & ComponentPropsWithoutRef<T>;
-
-const Component = <T extends ElementType = 'div'>({
-  as,
-  sx,
-  mx,
-  my,
-  px,
-  py,
-  ...props
-}: ComponentProps<T>) => {
-  const Element = as || 'div';
-  return (
-    <Element
-      css={[
-        {
-          marginInline: rem(mx),
-          marginBlock: rem(my),
-          paddingInline: rem(px),
-          paddingBlock: rem(py),
-        },
-        sx,
-      ]}
-      {...props}
-    />
-  );
-};
-
-export default Component;
+  gx?: number;
+  /**
+   * Sets the size of the gap (gutter) between an element's rows (in rem)
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
+   */
+  gy?: number;
+}
