@@ -9,7 +9,7 @@
   "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
-  "exports": "./index.cjs",
+  "exports": "./index.js",
   "scripts": {
     "lint": "eslint ."
   },

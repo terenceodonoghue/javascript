@@ -1,9 +1,9 @@
-const babel = require('prettier/parser-babel');
-const sortPackageJson = require('sort-package-json');
+import { parsers as babelParsers } from 'prettier/plugins/babel';
+import { sortPackageJson } from 'sort-package-json';
 
-const parser = babel.parsers['json-stringify'];
+const parser = babelParsers['json-stringify'];
 
-exports.parsers = {
+export const parsers = {
   'json-stringify': {
     ...parser,
     preprocess: (text, options) => {
