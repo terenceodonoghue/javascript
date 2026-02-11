@@ -1,0 +1,109 @@
+:root {
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* Padding - inline (horizontal) */
+.px-0 {
+  padding-inline: 0;
+}
+.px-4 {
+  padding-inline: var(--spacing-4);
+}
+.px-8 {
+  padding-inline: var(--spacing-8);
+}
+.px-12 {
+  padding-inline: var(--spacing-12);
+}
+.px-16 {
+  padding-inline: var(--spacing-16);
+}
+.px-24 {
+  padding-inline: var(--spacing-24);
+}
+.px-32 {
+  padding-inline: var(--spacing-32);
+}
+
+/* Padding - block (vertical) */
+.py-0 {
+  padding-block: 0;
+}
+.py-4 {
+  padding-block: var(--spacing-4);
+}
+.py-8 {
+  padding-block: var(--spacing-8);
+}
+.py-12 {
+  padding-block: var(--spacing-12);
+}
+.py-16 {
+  padding-block: var(--spacing-16);
+}
+.py-24 {
+  padding-block: var(--spacing-24);
+}
+.py-32 {
+  padding-block: var(--spacing-32);
+}
+
+/* Margin  - inline (horizontal) */
+.mx-0 {
+  margin-inline: 0;
+}
+.mx-4 {
+  margin-inline: var(--spacing-4);
+}
+.mx-8 {
+  margin-inline: var(--spacing-8);
+}
+.mx-12 {
+  margin-inline: var(--spacing-12);
+}
+.mx-16 {
+  margin-inline: var(--spacing-16);
+}
+.mx-24 {
+  margin-inline: var(--spacing-24);
+}
+.mx-32 {
+  margin-inline: var(--spacing-32);
+}
+
+/* Margin - block (vertical) */
+.my-0 {
+  margin-block: 0;
+}
+.my-4 {
+  margin-block: var(--spacing-4);
+}
+.my-8 {
+  margin-block: var(--spacing-8);
+}
+.my-12 {
+  margin-block: var(--spacing-12);
+}
+.my-16 {
+  margin-block: var(--spacing-16);
+}
+.my-24 {
+  margin-block: var(--spacing-24);
+}
+.my-32 {
+  margin-block: var(--spacing-32);
+}

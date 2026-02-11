@@ -16,9 +16,6 @@
   "scripts": {
     "lint": "eslint ./src"
   },
-  "dependencies": {
-    "@emotion/react": "^11.14.0"
-  },
   "devDependencies": {
     "eslint": "^9.39.1",
     "react": "^19.2.0",
