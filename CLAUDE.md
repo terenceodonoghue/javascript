@@ -15,7 +15,7 @@ Use **pnpm** (not npm/yarn). Node 20 LTS.
 
 - Lint react package: `pnpm --filter @terenceodonoghue/react lint`
 - Lint prettier plugin: `pnpm --filter @terenceodonoghue/prettier-plugin-packagejson lint`
-- No build or test scripts exist yet
+- Test react package: `pnpm --filter @terenceodonoghue/react test-ct`
 
 ## Conventions
 
@@ -23,6 +23,7 @@ Use **pnpm** (not npm/yarn). Node 20 LTS.
 - Components are **polymorphic** — they accept an `as` prop to change the rendered element
 - CSS Modules with a `classNames()` helper for dynamic class composition
 - CSS uses **logical properties** (`padding-inline`, `margin-block`) for LTR/RTL support
+- Tests use Playwright CT, grouped by component → concern (e.g., `element`, `styling`)
 - Commit messages use imperative present tense (e.g., "Add feature", "Fix bug")
 
 ## Code style
