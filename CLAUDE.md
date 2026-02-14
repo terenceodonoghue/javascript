@@ -24,6 +24,10 @@ Use **pnpm** (not npm/yarn). Node 20 LTS.
 - Tests use Playwright CT, grouped by component → concern (e.g., `element`, `styling`)
 - Commit messages use imperative present tense (e.g., "Add feature", "Fix bug")
 
+## CI
+
+CI: `.github/workflows/ci.yml` — update when adding tests to a new package or app.
+
 ## Code style
 
 Handled entirely by Biome — do not manually enforce formatting rules.
