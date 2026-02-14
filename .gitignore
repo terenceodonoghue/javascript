@@ -4,12 +4,15 @@
 ### Claude Code ###
 .claude/settings.local.json
 
-### dotenv ###
+### Dotenv ###
 .env
 .env.development.local
 .env.local
 .env.production.local
 .env.test.local
+
+### Lefthook ###
+.lefthook-local.yml
 
 ### macOS ###
 ._*
