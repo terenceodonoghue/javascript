@@ -2,10 +2,9 @@
 
 ## What is this?
 
-A pnpm monorepo with two workspace areas: `apps/*` (currently empty) and `packages/*`.
+A pnpm monorepo with two workspace areas: `apps/*` and `packages/*`.
 
 - **@terenceodonoghue/react** (`packages/react`) — React 19 component library (CSS Modules, TypeScript strict)
-- **@terenceodonoghue/prettier-plugin-packagejson** (`packages/prettier-plugin-packagejson`) — Prettier plugin for sorting package.json
 
 Early-stage; the React package is private/unpublished with one component so far (Flex).
 
@@ -14,7 +13,6 @@ Early-stage; the React package is private/unpublished with one component so far 
 Use **pnpm** (not npm/yarn). Node 20 LTS.
 
 - Lint react package: `pnpm --filter @terenceodonoghue/react lint`
-- Lint prettier plugin: `pnpm --filter @terenceodonoghue/prettier-plugin-packagejson lint`
 - Test react package: `pnpm --filter @terenceodonoghue/react test-ct`
 
 ## Conventions
@@ -28,5 +26,5 @@ Use **pnpm** (not npm/yarn). Node 20 LTS.
 
 ## Code style
 
-Handled entirely by Prettier and ESLint — do not manually enforce formatting rules.
-Import order is enforced by Prettier: third-party → `@terenceodonoghue` → relative.
+Handled entirely by Biome — do not manually enforce formatting rules.
+Import order is enforced by Biome: third-party → `@terenceodonoghue` → relative.

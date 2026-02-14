@@ -8,8 +8,8 @@
 .env.production.local
 .env.test.local
 
-### ESLint ###
-.eslintcache
+### Biome ###
+.biome/
 
 ### macOS ###
 ._*

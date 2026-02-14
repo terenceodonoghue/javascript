@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/sort-package-json.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Bash(bun create *)",
+      "Bash(bunx *)",
+      "Bash(npm create *)",
+      "Bash(npm init *)",
+      "Bash(npx *)",
+      "Bash(pnpm create *)",
+      "Bash(pnpm dlx *)",
+      "Bash(pnpx *)",
+      "Bash(yarn create *)",
+      "Bash(yarn dlx *)"
+    ]
+  }
+}
