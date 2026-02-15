@@ -12,32 +12,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version-file: .nvmrc
-          cache: pnpm
+          bun-version-file: .bun-version
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
-  test-react:
+  react:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version-file: .nvmrc
-          cache: pnpm
+          bun-version-file: .bun-version
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
+      - name: Run unit tests
+        run: bun run --filter @terenceodonoghue/react test
       - name: Install Playwright browsers
-        run: pnpm --filter @terenceodonoghue/react exec playwright install --with-deps
+        run: bun --filter @terenceodonoghue/react playwright install --with-deps
       - name: Run component tests
-        run: pnpm --filter @terenceodonoghue/react test-ct
+        run: bun run --filter @terenceodonoghue/react test-ct

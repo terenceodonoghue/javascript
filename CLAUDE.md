@@ -2,7 +2,7 @@
 
 ## What is this?
 
-A pnpm monorepo with two workspace areas: `apps/*` and `packages/*`.
+A Bun monorepo with two workspace areas: `apps/*` and `packages/*`.
 
 - **@terenceodonoghue/react** (`packages/react`) — React 19 component library (CSS Modules, TypeScript strict)
 
@@ -10,10 +10,11 @@ Early-stage; the React package is private/unpublished with one component so far 
 
 ## Commands
 
-Use **pnpm** (not npm/yarn). Node 20 LTS.
+Use **bun** (not npm/yarn/pnpm).
 
-- Lint react package: `pnpm --filter @terenceodonoghue/react lint`
-- Test react package: `pnpm --filter @terenceodonoghue/react test-ct`
+- Lint react package: `bun run --filter @terenceodonoghue/react lint`
+- Unit test react package: `bun run --filter @terenceodonoghue/react test`
+- Component test react package: `bun run --filter @terenceodonoghue/react test-ct`
 
 ## Conventions
 
@@ -21,7 +22,7 @@ Use **pnpm** (not npm/yarn). Node 20 LTS.
 - Components are **polymorphic** — they accept an `as` prop to change the rendered element
 - CSS Modules with a `classNames()` helper for dynamic class composition
 - CSS uses **logical properties** (`padding-inline`, `margin-block`) for LTR/RTL support
-- Tests use Playwright CT, grouped by component → concern (e.g., `element`, `styling`)
+- Unit tests (`*.test.ts`) use `bun:test`; component tests (`*.spec.tsx`) use Playwright CT, grouped by component → concern (e.g., `element`, `styling`)
 - Commit messages use imperative present tense (e.g., "Add feature", "Fix bug")
 
 ## CI
