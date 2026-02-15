@@ -1,8 +1,8 @@
-import { ElementType } from 'react';
+import type { ElementType } from 'react';
 
-import { classNames } from '../../utils/classNames.js';
-import { Container, Primitive } from '../types.js';
-import { flexbox, spacing } from './Layout.helpers.js';
+import { classNames } from '../../utils/classNames';
+import type { Container, Primitive } from '../types';
+import { flexbox, spacing } from './Layout.helpers';
 
 export interface FlexProps extends Container {
   column?: boolean;

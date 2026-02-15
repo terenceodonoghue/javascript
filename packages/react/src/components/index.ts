@@ -1,1 +1,1 @@
-export { Flex } from './Layout/Layout.js';
+export { Flex } from './Layout/Layout';

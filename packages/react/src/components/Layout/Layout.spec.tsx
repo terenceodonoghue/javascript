@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/experimental-ct-react';
 
-import { Flex } from './Layout.js';
+import { Flex } from './Layout';
 
 test.describe('Flex', () => {
   test.describe('element', () => {

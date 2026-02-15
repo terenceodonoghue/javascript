@@ -1,5 +1,5 @@
-import { Container } from '../types.js';
-import { FlexProps } from './Layout.js';
+import type { Container } from '../types';
+import type { FlexProps } from './Layout';
 import styles from './Layout.module.css';
 
 export const flexbox = ({ column }: FlexProps) =>

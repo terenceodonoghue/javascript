@@ -1,4 +1,4 @@
-import { classNames } from './classNames.js';
+import { classNames } from './classNames';
 import { describe, expect, test } from 'bun:test';
 
 describe('classNames', () => {
