@@ -1,0 +1,8 @@
+{
+  "ignoreDependencies": ["@types/react-dom", "sort-package-json"],
+  "workspaces": {
+    "packages/react": {
+      "ignoreDependencies": ["react-dom"]
+    }
+  }
+}
