@@ -34,7 +34,6 @@ jobs:
       - name: Run unit tests
         run: bun run --filter @terenceodonoghue/react test
       - name: Install Playwright browsers
-        run: bun playwright install --with-deps
-        working-directory: packages/react
+        run: bunx playwright install --with-deps
       - name: Run component tests
         run: bun run --filter @terenceodonoghue/react test-ct
