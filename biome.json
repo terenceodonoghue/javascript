@@ -210,7 +210,7 @@
           "level": "on",
           "options": {
             "groups": [
-              ":PACKAGE:",
+              [":BUN:", ":PACKAGE:", "!@terenceodonoghue/**"],
               ":BLANK_LINE:",
               ["@terenceodonoghue/**"],
               ":BLANK_LINE:",

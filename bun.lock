@@ -17,6 +17,9 @@
     },
     "packages/react": {
       "name": "@terenceodonoghue/react",
+      "dependencies": {
+        "@terenceodonoghue/utils": "workspace:*",
+      },
       "devDependencies": {
         "@playwright/experimental-ct-react": "^1.58.2",
         "react": "^19.2.0",
@@ -26,6 +29,9 @@
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
       },
+    },
+    "packages/utils": {
+      "name": "@terenceodonoghue/utils",
     },
   },
   "packages": {
@@ -258,6 +264,8 @@
     "@rollup/rollup-win32-x64-msvc": ["@rollup/rollup-win32-x64-msvc@4.57.1", "", { "os": "win32", "cpu": "x64" }, "sha512-mxRFDdHIWRxg3UfIIAwCm6NzvxG0jDX/wBN6KsQFTvKFqqg9vTrWUE68qEjHt19A5wwx5X5aUi2zuZT7YR0jrA=="],
 
     "@terenceodonoghue/react": ["@terenceodonoghue/react@workspace:packages/react"],
+
+    "@terenceodonoghue/utils": ["@terenceodonoghue/utils@workspace:packages/utils"],
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.10.1", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg=="],
 

@@ -1,6 +1,7 @@
 import type { ElementType } from 'react';
 
-import { classNames } from '../../utils/classNames';
+import { classNames } from '@terenceodonoghue/utils';
+
 import type { Container, Primitive } from '../types';
 import { flexbox, spacing } from './Layout.helpers';
 

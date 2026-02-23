@@ -1,5 +1,6 @@
-import { classNames } from './classNames';
 import { describe, expect, test } from 'bun:test';
+
+import { classNames } from './classNames';
 
 describe('classNames', () => {
   test('joins multiple strings', () => {
