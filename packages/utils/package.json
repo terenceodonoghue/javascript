@@ -1,6 +1,13 @@
 {
   "name": "@terenceodonoghue/utils",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terenceodonoghue/javascript.git",
+    "directory": "packages/utils"
+  },
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
