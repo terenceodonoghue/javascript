@@ -170,6 +170,16 @@
   },
   "overrides": [
     {
+      "includes": ["**/*.d.ts", "**/*.d.mts", "**/*.d.cts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off"
+          }
+        }
+      }
+    },
+    {
       "includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "linter": {
         "rules": {

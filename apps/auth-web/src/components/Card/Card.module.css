@@ -1,0 +1,24 @@
+.card {
+  inline-size: 100%;
+  max-inline-size: 24rem;
+  min-block-size: 20rem;
+  padding: var(--spacing-32);
+  background-color: hsl(var(--color-bg-surface));
+  border: 1px solid hsl(var(--color-border) / 0.5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glow-accent);
+}
+
+.header {
+  margin-block-end: var(--spacing-32);
+}
+
+.header:has(~ form) {
+  margin-block-end: var(--spacing-24);
+}
+
+.footer {
+  margin-block-start: var(--spacing-24);
+  padding-block-start: var(--spacing-20);
+  border-block-start: 1px solid hsl(var(--color-border));
+}

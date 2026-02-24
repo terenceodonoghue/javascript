@@ -1,6 +1,11 @@
 ### Biome ###
 .biome/
 
+### Build ###
+build/
+dist/
+out/
+
 ### Bun ###
 bun.lockb
 

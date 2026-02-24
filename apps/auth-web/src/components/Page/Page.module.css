@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 100dvh;
+  min-inline-size: 100dvw;
+  padding: var(--spacing-16);
+  background:
+    radial-gradient(
+      ellipse at top left,
+      hsl(var(--color-bg-gradient) / 0.8),
+      transparent 28%
+    ),
+    hsl(var(--color-bg-base));
+}

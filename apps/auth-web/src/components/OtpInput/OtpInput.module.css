@@ -1,0 +1,50 @@
+.otp-input {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.legend {
+  position: absolute;
+  overflow: hidden;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.autofill {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.digit {
+  display: block;
+  inline-size: 3rem;
+  block-size: 3rem;
+  padding: 0;
+  border: 1px solid hsl(var(--color-border));
+  border-radius: var(--radius-md);
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  background-color: hsl(var(--color-bg-muted) / 0.5);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-align: center;
+  transition:
+    border-color var(--duration-fast) var(--easing-standard),
+    outline-color var(--duration-fast) var(--easing-standard);
+}
+
+.digit:focus {
+  border-color: hsl(var(--color-accent));
+  outline-color: hsl(var(--color-accent));
+}

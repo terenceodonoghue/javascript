@@ -19,6 +19,14 @@ describe('classNames', () => {
     expect(classNames('a', '', 'b')).toBe('a b');
   });
 
+  test('filters undefined values', () => {
+    expect(classNames('a', undefined, 'b')).toBe('a b');
+  });
+
+  test('filters false values', () => {
+    expect(classNames('a', false, 'b')).toBe('a b');
+  });
+
   test('returns empty string for no arguments', () => {
     expect(classNames()).toBe('');
   });

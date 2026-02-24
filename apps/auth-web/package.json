@@ -1,0 +1,21 @@
+{
+  "name": "@terenceodonoghue/auth-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "biome check ./src",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.15.4",
+    "@terenceodonoghue/utils": "workspace:*",
+    "lucide-solid": "^0.575.0",
+    "solid-js": "^1.9.11"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1",
+    "vite-plugin-solid": "^2.11.10"
+  }
+}
