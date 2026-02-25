@@ -1,6 +1,6 @@
 # auth-web
 
-Sign-in and registration UI for the WebAuthn/passkey auth API. A SolidJS SPA served as a static site via Nginx.
+Login and registration UI for the WebAuthn/passkey auth API. A SolidJS SPA served as a static site via Caddy.
 
 ## Prerequisites
 
@@ -53,12 +53,13 @@ These variables are used only at build time and are not configurable at runtime.
 
 | Variable | Description | Dev default | Production default |
 |---|---|---|---|
-| `VITE_BASE` | Vite base path | `/` | `/login/` |
+| `VITE_BASE` | Vite base path | `/` | `/auth/` |
 | `VITE_API_BASE` | API path prefix | `` (empty) | `/auth` |
+| `VITE_APP_TITLE` | App title on the login page | `Homelab` | `Homelab` |
 
 ## How it works
 
-1. **Sign in** — Calls `POST /api/login/begin` to get WebAuthn assertion options, invokes `navigator.credentials.get()`, then calls `POST /api/login/finish`. On success, redirects to the `redirect_uri` query parameter if present.
+1. **Login** — Calls `POST /api/login/begin` to get WebAuthn assertion options, invokes `navigator.credentials.get()`, then calls `POST /api/login/finish`. On success, redirects to the `redirect_uri` query parameter if present.
 
 2. **Register** — Submits email to `POST /api/register/begin`. On success, navigates to the verify screen. A 409 response means the email is already registered.
 
