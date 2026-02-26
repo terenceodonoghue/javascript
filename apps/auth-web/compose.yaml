@@ -16,7 +16,9 @@ services:
       - '6379:6379'
 
   auth-api:
-    image: ghcr.io/terenceodonoghue/auth-api:latest
+    build:
+      context: ../../../go
+      dockerfile: services/auth-api/Dockerfile
     depends_on:
       - postgres
       - redis
@@ -24,7 +26,7 @@ services:
       DATABASE_URL: postgres://auth:auth@postgres:5432/auth?sslmode=disable
       REDIS_ADDR: redis:6379
       RP_ID: localhost
-      RP_ORIGIN: http://localhost:5173
+      RP_ORIGINS: http://localhost:5173
       LOG_VERIFICATION_CODES: 'true'
     ports:
       - '8081:8081'
