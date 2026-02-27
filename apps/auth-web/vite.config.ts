@@ -5,11 +5,10 @@ export default defineConfig({
   base: process.env.VITE_BASE ?? '/',
   plugins: [solidPlugin()],
   server: {
-    open: '/?redirect_uri=http://localhost:5173',
+    open: '/',
     proxy: {
       '/api': {
         target: 'http://localhost:8081',
-        headers: { 'X-Network-Context': 'local' },
       },
     },
   },

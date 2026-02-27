@@ -39,6 +39,9 @@
   --spacing-32: 2rem;
   --spacing-48: 3rem;
 
+  /* Layout */
+  --max-width-content: 64rem;
+
   /* Typography */
   --font-size-title: 1.5rem;
   --font-size-heading: 1.25rem;

@@ -4,7 +4,6 @@ import { createSignal } from 'solid-js';
 import { fromBase64url, toBase64url } from '@terenceodonoghue/utils';
 
 import { registerBegin, registerFinish } from '../../api/auth';
-import { withRedirect } from '../../lib/redirect';
 
 export const createRegister = () => {
   const navigate = useNavigate();
@@ -49,7 +48,7 @@ export const createRegister = () => {
         },
       });
 
-      navigate(withRedirect('/success'));
+      navigate('/success');
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Registration failed');
     } finally {

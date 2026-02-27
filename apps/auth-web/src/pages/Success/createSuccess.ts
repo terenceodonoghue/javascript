@@ -1,20 +1,13 @@
-import { useSearchParams } from '@solidjs/router';
+import { useNavigate } from '@solidjs/router';
 import { onMount } from 'solid-js';
 
 export const createSuccess = () => {
-  const [params] = useSearchParams();
+  const navigate = useNavigate();
 
   onMount(() => {
-    const redirectUri = params.redirect_uri;
-    if (typeof redirectUri === 'string') {
-      const timer = setTimeout(() => {
-        window.location.href = redirectUri;
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      navigate('/tokens');
+    }, 4000);
+    return () => clearTimeout(timer);
   });
-
-  return {
-    redirecting: () => typeof params.redirect_uri === 'string',
-  } as const;
 };

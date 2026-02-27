@@ -4,7 +4,6 @@ import { createSignal } from 'solid-js';
 import { fromBase64url, toBase64url } from '@terenceodonoghue/utils';
 
 import { loginBegin, loginFinish } from '../../api/auth';
-import { withRedirect } from '../../lib/redirect';
 
 export const createLogin = () => {
   const navigate = useNavigate();
@@ -45,7 +44,7 @@ export const createLogin = () => {
         },
       });
 
-      navigate(withRedirect('/success'));
+      navigate('/success');
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Login failed');
     } finally {
