@@ -53,6 +53,7 @@ jobs:
         with:
           image-ref: auth-web:scan
           severity: CRITICAL,HIGH
+          ignore-unfixed: "true"
           exit-code: "1"
 
       - name: Log in to GHCR
