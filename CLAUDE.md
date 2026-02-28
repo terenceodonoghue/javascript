@@ -33,7 +33,9 @@ Use **bun** (not npm/yarn/pnpm).
 ## CI
 
 - `packages.yml` — test all packages (utils unit tests, react component tests); update when adding tests to a new package
-- `auth-web.yml` — Docker build and publish to ghcr.io on push to main (path-filtered to `apps/auth-web/**`)
+- `auth-web.yml` — security scan (Gitleaks, CodeQL), Docker build, Trivy image scan, and publish to ghcr.io on push to main (path-filtered to `apps/auth-web/**`)
+
+Per-service workflows follow the same pattern: `scan` job (Gitleaks, CodeQL) → `publish` job (build, Trivy, push). Add a new workflow file per app.
 
 ## Code style
 

@@ -2,6 +2,8 @@ pre-commit:
   env:
     PATH: "{HOME}/.bun/bin:/usr/local/bin:/usr/bin:/bin"
   commands:
+    gitleaks:
+      run: gitleaks protect --staged --no-banner
     biome:
       glob: "*.{ts,tsx,css,json}"
       run: bun biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}

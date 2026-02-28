@@ -1,5 +1,7 @@
 # javascript
 
+![Auth Web](https://github.com/terenceodonoghue/javascript/actions/workflows/auth-web.yml/badge.svg)
+
 Apps and packages in a Bun monorepo, published to GitHub Container Registry.
 
 ## Apps
