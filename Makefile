@@ -1,4 +1,8 @@
-.PHONY: security-scan
+.PHONY: setup security-scan
+
+setup:
+	brew bundle
+	bun install
 
 security-scan:
 	docker build -t auth-web:scan -f apps/auth-web/Dockerfile .
