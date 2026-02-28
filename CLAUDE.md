@@ -10,6 +10,8 @@ A Bun monorepo with two workspace areas: `apps/*` and `packages/*`.
 
 ## Commands
 
+- First-time setup: `make setup` (installs Homebrew tools and runs `bun install`)
+
 Use **bun** (not npm/yarn/pnpm).
 
 - Dev server for auth-web: `bun run --filter @terenceodonoghue/auth-web dev`
