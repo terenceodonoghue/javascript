@@ -1,11 +1,16 @@
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: bun
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
 
   - package-ecosystem: docker
     directory: /apps/auth-web
     schedule:
-      interval: weekly
+      interval: monthly
