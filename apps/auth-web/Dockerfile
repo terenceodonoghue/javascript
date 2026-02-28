@@ -12,11 +12,7 @@ COPY packages/utils/ packages/utils/
 
 WORKDIR /app/apps/auth-web
 
-ARG VITE_BASE=/auth/
-ARG VITE_API_BASE=/auth
 ARG VITE_APP_TITLE=Homelab
-ENV VITE_BASE=$VITE_BASE
-ENV VITE_API_BASE=$VITE_API_BASE
 ENV VITE_APP_TITLE=$VITE_APP_TITLE
 
 RUN bun run build
