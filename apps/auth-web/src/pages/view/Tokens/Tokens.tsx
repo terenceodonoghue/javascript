@@ -1,31 +1,10 @@
-import { Check, Copy, LogOut, Pencil, Plus, Trash2 } from 'lucide-solid';
-import { For, Show } from 'solid-js';
+import { LogOut } from 'lucide-solid';
 
-import { Button } from '../../../components/Form/Form';
-import { Body } from '../../../components/Text/Text';
+import type { ApiToken } from '../../../api/auth.types';
 import { Header, heading, Main, Page } from '../components/Page';
+import { type Column, Table } from '../components/Table';
 import { createTokens } from './createTokens';
 import styles from './Tokens.module.css';
-
-const maskToken = (token: string): string => {
-  if (token.length <= 8) return token;
-  const underscoreIdx = token.indexOf('_');
-  const prefix =
-    underscoreIdx !== -1
-      ? token.slice(0, underscoreIdx + 1)
-      : token.slice(0, 4);
-  const suffix = token.slice(-4);
-  return `${prefix}${'•'.repeat(16)}${suffix}`;
-};
-
-const formatDate = (iso: string | null): string => {
-  if (!iso) return 'Never';
-  return new Date(iso).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
-};
 
 export const Tokens = () => {
   const {
@@ -33,18 +12,22 @@ export const Tokens = () => {
     name,
     setName,
     loading,
-    editingId,
-    editingName,
-    setEditingName,
-    copiedId,
+    updatingId,
+    updatingName,
+    setUpdatingName,
     handleCreate,
     handleUpdate,
     handleDelete,
-    handleCopy,
-    startEditing,
-    cancelEditing,
+    startUpdate,
+    cancelUpdate,
     handleLogout,
   } = createTokens();
+
+  const columns: Column<ApiToken>[] = [
+    { header: 'Name', key: 'name', editable: true },
+    { header: 'Token', key: 'token', type: 'masked', copyable: true },
+    { header: 'Last Used', key: 'last_used_at', type: 'date' },
+  ];
 
   return (
     <Page>
@@ -57,135 +40,26 @@ export const Tokens = () => {
       </Header>
 
       <Main>
-        <div class={styles.titleArea}>
+        <div>
           <h1 class={heading}>API Tokens</h1>
-          <Body>Create and manage tokens for programmatic access.</Body>
+          <p>Create and manage tokens for programmatic access.</p>
         </div>
 
-        <div class={styles.panel}>
-          <form
-            class={styles.toolbar}
-            autocomplete="off"
-            onSubmit={handleCreate}
-          >
-            <div class={styles.inputWrap}>
-              <span class={styles.inputIcon}>
-                <Plus size={16} />
-              </span>
-              <input
-                type="text"
-                placeholder="New token name..."
-                value={name()}
-                onInput={(e) => setName(e.currentTarget.value)}
-                required
-                style={{ 'padding-inline-start': 'var(--spacing-32)' }}
-              />
-            </div>
-            <Button type="submit" disabled={loading() || !name()}>
-              Create
-            </Button>
-          </form>
-
-          <table class={styles.table}>
-            <thead>
-              <tr>
-                <th class={styles.th}>Name</th>
-                <th class={styles.th}>Token</th>
-                <th class={styles.th}>Last Used</th>
-                <th class={styles.th}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <For each={tokens()}>
-                {(token) => (
-                  <tr>
-                    <td class={styles.td}>
-                      <Show
-                        when={editingId() === token.id}
-                        fallback={token.name}
-                      >
-                        <input
-                          class={styles.editInput}
-                          type="text"
-                          value={editingName()}
-                          onInput={(e) => setEditingName(e.currentTarget.value)}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter') handleUpdate(token.id);
-                            if (e.key === 'Escape') cancelEditing();
-                          }}
-                          ref={(el) => setTimeout(() => el.focus())}
-                        />
-                      </Show>
-                    </td>
-                    <td class={styles.td}>
-                      <span class={styles.tokenCell}>
-                        <span class={styles.tokenValue}>
-                          {maskToken(token.token)}
-                        </span>
-                        <button
-                          type="button"
-                          class={styles.iconBtn}
-                          title="Copy token"
-                          onClick={() => handleCopy(token.token, token.id)}
-                        >
-                          <Show
-                            when={copiedId() === token.id}
-                            fallback={<Copy size={14} />}
-                          >
-                            <Check size={14} class={styles.checkIcon} />
-                          </Show>
-                        </button>
-                      </span>
-                    </td>
-                    <td class={`${styles.td} ${styles.muted}`}>
-                      {formatDate(token.last_used_at)}
-                    </td>
-                    <td class={styles.td}>
-                      <div class={styles.actions}>
-                        <Show
-                          when={editingId() === token.id}
-                          fallback={
-                            <button
-                              type="button"
-                              class={styles.action}
-                              onClick={() => startEditing(token.id, token.name)}
-                            >
-                              <Pencil size={14} />
-                              Edit
-                            </button>
-                          }
-                        >
-                          <button
-                            type="button"
-                            class={styles.action}
-                            onClick={() => handleUpdate(token.id)}
-                          >
-                            Save
-                          </button>
-                          <button
-                            type="button"
-                            class={styles.action}
-                            onClick={cancelEditing}
-                          >
-                            Cancel
-                          </button>
-                        </Show>
-                        <button
-                          type="button"
-                          class={styles.action}
-                          onClick={() => handleDelete(token.id)}
-                        >
-                          <Trash2 size={14} />
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                )}
-              </For>
-            </tbody>
-          </table>
-        </div>
+        <Table
+          columns={columns}
+          rows={tokens}
+          inputName={name}
+          onInputNameChange={setName}
+          loading={loading}
+          onCreate={handleCreate}
+          updatingId={updatingId}
+          updatingValue={updatingName}
+          onUpdatingValueChange={setUpdatingName}
+          onUpdate={startUpdate}
+          onUpdateCancel={cancelUpdate}
+          onUpdateSave={handleUpdate}
+          onDelete={handleDelete}
+        />
       </Main>
     </Page>
   );

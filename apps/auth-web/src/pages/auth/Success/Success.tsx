@@ -1,6 +1,5 @@
 import { CircleCheck } from 'lucide-solid';
 
-import { Body } from '../../../components/Text/Text';
 import { Card, Title } from '../components/Card';
 import { Page } from '../components/Page';
 import { createSuccess } from './createSuccess';
@@ -16,7 +15,7 @@ export const Success = () => {
           <CircleCheck size="1.75rem" />
         </div>
         <Title>Access granted</Title>
-        <Body>Beaming you in...</Body>
+        <p>Beaming you in...</p>
       </Card>
     </Page>
   );

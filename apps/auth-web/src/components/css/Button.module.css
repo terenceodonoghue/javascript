@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-12);
+  background-color: hsl(var(--color-accent));
+  border: none;
+  border-radius: var(--radius-md);
+  color: hsl(var(--color-on-accent));
+  font-weight: 500;
+  line-height: var(--line-height-body);
+  text-align: center;
+  transition: filter var(--duration-fast) var(--easing-standard);
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.sm {
+    padding-block: var(--spacing-6);
+    padding-inline: var(--spacing-16);
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  &.lg {
+    padding-block: var(--spacing-12);
+    padding-inline: var(--spacing-16);
+    font-size: var(--font-size-body);
+  }
+}

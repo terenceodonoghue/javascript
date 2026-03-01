@@ -1,7 +1,7 @@
 import { FingerprintPattern } from 'lucide-solid';
 
-import { Button } from '../../../components/Form/Form';
-import { Body, Link } from '../../../components/Text/Text';
+import { Button } from '../../../components/Button';
+import { Link } from '../../../components/Link';
 import { loginSubtitle } from '../../../lib/messages';
 import { Card, Footer, Header } from '../components/Card';
 import { Page } from '../components/Page';
@@ -17,9 +17,14 @@ export const Login = () => {
       <Card class={styles.login}>
         <Header>
           <h1 class={styles.title}>{import.meta.env.VITE_APP_TITLE}</h1>
-          <Body>{subtitle}</Body>
+          <p>{subtitle}</p>
         </Header>
-        <Button type="button" onClick={handleLogin} disabled={loading()}>
+        <Button
+          size="lg"
+          type="button"
+          onClick={handleLogin}
+          disabled={loading()}
+        >
           <FingerprintPattern size={20} />
           {loading() ? 'Verifying human...' : 'Sign in with passkey'}
         </Button>

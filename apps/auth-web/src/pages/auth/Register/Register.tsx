@@ -1,5 +1,6 @@
-import { Back, Button, TextInput } from '../../../components/Form/Form';
-import { Body } from '../../../components/Text/Text';
+import { Back } from '../../../components/Back';
+import { Button } from '../../../components/Button';
+import { TextInput } from '../../../components/TextInput';
 import { Card, Header, Title } from '../components/Card';
 import { Page } from '../components/Page';
 import { createRegister } from './createRegister';
@@ -14,7 +15,7 @@ export const Register = () => {
         <Back onClick={() => history.back()} />
         <Header>
           <Title>Create a passkey</Title>
-          <Body>What should we call it?</Body>
+          <p>What should we call it?</p>
         </Header>
         <form class={styles.form} onSubmit={handleSubmit}>
           <TextInput
@@ -26,7 +27,7 @@ export const Register = () => {
             autocomplete="off"
             required
           />
-          <Button type="submit" disabled={loading() || !name()}>
+          <Button size="lg" type="submit" disabled={loading() || !name()}>
             {loading() ? 'Creating passkey...' : 'Create passkey'}
           </Button>
         </form>

@@ -8,20 +8,20 @@ export const Page = (props: ComponentProps<'div'>) => {
   return <div class={styles.page} {...props} />;
 };
 
-export const Header = (props: ComponentProps<'header'>) => {
-  const [local, rest] = splitProps(props, ['children']);
-  return (
-    <header class={styles.header} {...rest}>
-      <div class={styles.layout}>{local.children}</div>
-    </header>
-  );
-};
-
 export const Main = (props: ComponentProps<'main'>) => {
   const [local, rest] = splitProps(props, ['children']);
   return (
     <main class={styles.main} {...rest}>
       <div class={styles.layout}>{local.children}</div>
     </main>
+  );
+};
+
+export const Header = (props: ComponentProps<'header'>) => {
+  const [local, rest] = splitProps(props, ['children']);
+  return (
+    <header class={styles.header} {...rest}>
+      <div class={styles.layout}>{local.children}</div>
+    </header>
   );
 };

@@ -1,5 +1,5 @@
 import { useNavigate } from '@solidjs/router';
-import { createSignal, onCleanup, onMount } from 'solid-js';
+import { createSignal, onMount } from 'solid-js';
 
 import {
   createToken,
@@ -15,12 +15,8 @@ export const createTokens = () => {
   const [tokens, setTokens] = createSignal<ApiToken[]>([]);
   const [name, setName] = createSignal('');
   const [loading, setLoading] = createSignal(false);
-  const [editingId, setEditingId] = createSignal<string | null>(null);
-  const [editingName, setEditingName] = createSignal('');
-  const [copiedId, setCopiedId] = createSignal<string | null>(null);
-
-  let copyTimer: ReturnType<typeof setTimeout> | undefined;
-  onCleanup(() => clearTimeout(copyTimer));
+  const [updatingId, setUpdatingId] = createSignal<string | null>(null);
+  const [updatingName, setUpdatingName] = createSignal('');
 
   const handleUnauthorized = async () => {
     try {
@@ -64,9 +60,9 @@ export const createTokens = () => {
 
   const handleUpdate = async (id: string) => {
     try {
-      const updated = await updateToken(id, editingName());
+      const updated = await updateToken(id, updatingName());
       setTokens((prev) => prev.map((t) => (t.id === id ? updated : t)));
-      setEditingId(null);
+      setUpdatingId(null);
     } catch (err) {
       if (isUnauthorized(err)) {
         await handleUnauthorized();
@@ -91,20 +87,13 @@ export const createTokens = () => {
     }
   };
 
-  const handleCopy = async (token: string, id: string) => {
-    await navigator.clipboard.writeText(token);
-    clearTimeout(copyTimer);
-    setCopiedId(id);
-    copyTimer = setTimeout(() => setCopiedId(null), 1500);
+  const startUpdate = (id: string, currentName: string) => {
+    setUpdatingId(id);
+    setUpdatingName(currentName);
   };
 
-  const startEditing = (id: string, currentName: string) => {
-    setEditingId(id);
-    setEditingName(currentName);
-  };
-
-  const cancelEditing = () => {
-    setEditingId(null);
+  const cancelUpdate = () => {
+    setUpdatingId(null);
   };
 
   const handleLogout = async () => {
@@ -120,16 +109,14 @@ export const createTokens = () => {
     name,
     setName,
     loading,
-    editingId,
-    editingName,
-    setEditingName,
-    copiedId,
+    updatingId,
+    updatingName,
+    setUpdatingName,
     handleCreate,
     handleUpdate,
     handleDelete,
-    handleCopy,
-    startEditing,
-    cancelEditing,
+    startUpdate,
+    cancelUpdate,
     handleLogout,
   } as const;
 };
