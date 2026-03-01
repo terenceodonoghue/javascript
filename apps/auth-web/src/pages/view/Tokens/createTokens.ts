@@ -7,8 +7,8 @@ import {
   listTokens,
   logout,
   updateToken,
-} from '../../api/auth';
-import type { ApiToken } from '../../api/auth.types';
+} from '../../../api/auth';
+import type { ApiToken } from '../../../api/auth.types';
 
 export const createTokens = () => {
   const navigate = useNavigate();

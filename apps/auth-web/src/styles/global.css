@@ -8,10 +8,9 @@
 
 :root {
   /* Backgrounds */
-  --color-bg-base: 220 20% 96%;
-  --color-bg-gradient: 195 60% 85%;
+  --color-background: 220 20% 96%;
   --color-bg-muted: 220 15% 90%;
-  --color-bg-surface: 0 0% 100%;
+  --color-surface: 0 0% 100%;
 
   /* Foregrounds */
   --color-text-primary: 220 20% 15%;
@@ -26,7 +25,6 @@
 
   /* States */
   --color-success: 145 70% 42%;
-  --color-error: 0 72% 51%;
 
   /* Spacing */
   --spacing-4: 0.25rem;
@@ -39,17 +37,10 @@
   --spacing-32: 2rem;
   --spacing-48: 3rem;
 
-  /* Layout */
-  --max-width-content: 64rem;
-
   /* Typography */
-  --font-size-title: 1.5rem;
-  --font-size-heading: 1.25rem;
   --font-size-body: 0.875rem;
 
   /* Line Heights */
-  --line-height-title: 2rem;
-  --line-height-heading: 1.75rem;
   --line-height-body: 1.25rem;
 
   /* Radii */
@@ -60,14 +51,6 @@
   /* Motion */
   --duration-fast: 0.15s;
   --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Shadows */
-  --shadow-glow-accent:
-    0 0 30px -5px hsl(var(--color-accent) / 0.3),
-    0 0 60px -10px hsl(var(--color-accent) / 0.15);
-  --shadow-glow-success:
-    0 0 30px -5px hsl(var(--color-success) / 0.3),
-    0 0 60px -10px hsl(var(--color-success) / 0.15);
 }
 
 html,
@@ -77,7 +60,7 @@ body,
 }
 
 body {
-  background-color: hsl(var(--color-bg-base));
+  background-color: hsl(var(--color-background));
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   font-size: var(--font-size-body);
   color: hsl(var(--color-text-primary));

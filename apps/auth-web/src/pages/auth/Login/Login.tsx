@@ -1,10 +1,10 @@
 import { FingerprintPattern } from 'lucide-solid';
 
-import { Card, CardFooter, CardHeader } from '../../components/Card/Card';
-import { Button } from '../../components/Form/Form';
-import { Page } from '../../components/Page/Page';
-import { Body, Link, Title } from '../../components/Text/Text';
-import { loginSubtitle } from '../../lib/messages';
+import { Button } from '../../../components/Form/Form';
+import { Body, Link } from '../../../components/Text/Text';
+import { loginSubtitle } from '../../../lib/messages';
+import { Card, Footer, Header } from '../components/Card';
+import { Page } from '../components/Page';
 import { createLogin } from './createLogin';
 import styles from './Login.module.css';
 
@@ -15,17 +15,17 @@ export const Login = () => {
   return (
     <Page>
       <Card class={styles.login}>
-        <CardHeader>
-          <Title>{import.meta.env.VITE_APP_TITLE}</Title>
+        <Header>
+          <h1 class={styles.title}>{import.meta.env.VITE_APP_TITLE}</h1>
           <Body>{subtitle}</Body>
-        </CardHeader>
+        </Header>
         <Button type="button" onClick={handleLogin} disabled={loading()}>
           <FingerprintPattern size={20} />
           {loading() ? 'Verifying human...' : 'Sign in with passkey'}
         </Button>
-        <CardFooter>
+        <Footer>
           <Link href="/register">Create a passkey</Link>
-        </CardFooter>
+        </Footer>
       </Card>
     </Page>
   );

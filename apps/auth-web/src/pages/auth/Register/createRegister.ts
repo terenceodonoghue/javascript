@@ -3,7 +3,7 @@ import { createSignal } from 'solid-js';
 
 import { fromBase64url, toBase64url } from '@terenceodonoghue/utils';
 
-import { registerBegin, registerFinish } from '../../api/auth';
+import { registerBegin, registerFinish } from '../../../api/auth';
 
 export const createRegister = () => {
   const navigate = useNavigate();

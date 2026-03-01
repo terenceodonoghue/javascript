@@ -19,12 +19,6 @@
   outline-color: hsl(var(--color-accent));
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-16);
-}
-
 .button {
   display: flex;
   align-items: center;

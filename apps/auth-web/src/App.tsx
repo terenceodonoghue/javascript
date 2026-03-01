@@ -1,9 +1,7 @@
 import { Route, Router } from '@solidjs/router';
 
-import { Login } from './pages/Login/Login';
-import { Register } from './pages/Register/Register';
-import { Success } from './pages/Success/Success';
-import { Tokens } from './pages/Tokens/Tokens';
+import { Login, Register, Success } from './pages/auth';
+import { Tokens } from './pages/view';
 
 export const App = () => (
   <Router base={import.meta.env.BASE_URL.replace(/\/$/, '')}>

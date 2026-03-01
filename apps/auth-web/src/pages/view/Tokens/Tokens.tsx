@@ -1,9 +1,9 @@
 import { Check, Copy, LogOut, Pencil, Plus, Trash2 } from 'lucide-solid';
 import { For, Show } from 'solid-js';
 
-import { Button } from '../../components/Form/Form';
-import { PageContent, PageHeader } from '../../components/Page/Page';
-import { Body, Heading } from '../../components/Text/Text';
+import { Button } from '../../../components/Form/Form';
+import { Body } from '../../../components/Text/Text';
+import { Header, heading, Main, Page } from '../components/Page';
 import { createTokens } from './createTokens';
 import styles from './Tokens.module.css';
 
@@ -47,18 +47,18 @@ export const Tokens = () => {
   } = createTokens();
 
   return (
-    <div class={styles.page}>
-      <PageHeader>
-        <Heading>{import.meta.env.VITE_APP_TITLE}</Heading>
+    <Page>
+      <Header>
+        <h1 class={heading}>{import.meta.env.VITE_APP_TITLE}</h1>
         <button type="button" class={styles.logout} onClick={handleLogout}>
           <LogOut size={16} />
           Logout
         </button>
-      </PageHeader>
+      </Header>
 
-      <PageContent>
+      <Main>
         <div class={styles.titleArea}>
-          <Heading>API Tokens</Heading>
+          <h1 class={heading}>API Tokens</h1>
           <Body>Create and manage tokens for programmatic access.</Body>
         </div>
 
@@ -186,7 +186,7 @@ export const Tokens = () => {
             </tbody>
           </table>
         </div>
-      </PageContent>
-    </div>
+      </Main>
+    </Page>
   );
 };

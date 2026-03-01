@@ -3,7 +3,7 @@ import { createSignal } from 'solid-js';
 
 import { fromBase64url, toBase64url } from '@terenceodonoghue/utils';
 
-import { loginBegin, loginFinish } from '../../api/auth';
+import { loginBegin, loginFinish } from '../../../api/auth';
 
 export const createLogin = () => {
   const navigate = useNavigate();

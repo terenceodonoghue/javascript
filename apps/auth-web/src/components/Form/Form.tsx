@@ -3,10 +3,6 @@ import type { ComponentProps } from 'solid-js';
 
 import styles from './Form.module.css';
 
-export const Form = (props: ComponentProps<'form'>) => {
-  return <form class={styles.form} {...props} />;
-};
-
 export const Back = (props: ComponentProps<'button'>) => {
   return (
     <button type="button" class={styles.back} {...props}>

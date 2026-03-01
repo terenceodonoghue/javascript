@@ -1,8 +1,9 @@
-import { Card, CardHeader } from '../../components/Card/Card';
-import { Back, Button, Form, TextInput } from '../../components/Form/Form';
-import { Page } from '../../components/Page/Page';
-import { Body, Heading } from '../../components/Text/Text';
+import { Back, Button, TextInput } from '../../../components/Form/Form';
+import { Body } from '../../../components/Text/Text';
+import { Card, Header, Title } from '../components/Card';
+import { Page } from '../components/Page';
 import { createRegister } from './createRegister';
+import styles from './Register.module.css';
 
 export const Register = () => {
   const { name, setName, loading, handleSubmit } = createRegister();
@@ -11,11 +12,11 @@ export const Register = () => {
     <Page>
       <Card>
         <Back onClick={() => history.back()} />
-        <CardHeader>
-          <Heading>Create a passkey</Heading>
+        <Header>
+          <Title>Create a passkey</Title>
           <Body>What should we call it?</Body>
-        </CardHeader>
-        <Form onSubmit={handleSubmit}>
+        </Header>
+        <form class={styles.form} onSubmit={handleSubmit}>
           <TextInput
             id="name"
             type="text"
@@ -28,7 +29,7 @@ export const Register = () => {
           <Button type="submit" disabled={loading() || !name()}>
             {loading() ? 'Creating passkey...' : 'Create passkey'}
           </Button>
-        </Form>
+        </form>
       </Card>
     </Page>
   );

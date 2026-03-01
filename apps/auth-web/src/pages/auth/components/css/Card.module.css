@@ -3,17 +3,13 @@
   max-inline-size: 24rem;
   min-block-size: 20rem;
   padding: var(--spacing-32);
-  background-color: hsl(var(--color-bg-surface));
+  background-color: hsl(var(--color-surface));
   border: 1px solid hsl(var(--color-border) / 0.5);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-glow-accent);
 }
 
 .header {
-  margin-block-end: var(--spacing-32);
-}
-
-.header:has(~ form) {
   margin-block-end: var(--spacing-24);
 }
 
@@ -21,4 +17,12 @@
   margin-block-start: var(--spacing-24);
   padding-block-start: var(--spacing-20);
   border-block-start: 1px solid hsl(var(--color-border));
+}
+
+.title {
+  margin-block-end: var(--spacing-4);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
 }

@@ -1,0 +1,28 @@
+:root {
+  /* Backgrounds */
+  --color-bg-gradient: 195 60% 85%;
+
+  /* Shadows */
+  --shadow-glow-accent:
+    0 0 30px -5px hsl(var(--color-accent) / 0.3),
+    0 0 60px -10px hsl(var(--color-accent) / 0.15);
+  --shadow-glow-success:
+    0 0 30px -5px hsl(var(--color-success) / 0.3),
+    0 0 60px -10px hsl(var(--color-success) / 0.15);
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 100dvh;
+  min-inline-size: 100dvw;
+  padding: var(--spacing-16);
+  background:
+    radial-gradient(
+      ellipse at top left,
+      hsl(var(--color-bg-gradient) / 0.8),
+      transparent 28%
+    ),
+    hsl(var(--color-background));
+}

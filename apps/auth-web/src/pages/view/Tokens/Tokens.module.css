@@ -1,18 +1,3 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  min-block-size: 100dvh;
-  min-inline-size: 100dvw;
-  padding: var(--spacing-16);
-  background:
-    radial-gradient(
-      ellipse at top left,
-      hsl(var(--color-bg-gradient) / 0.8),
-      transparent 28%
-    ),
-    hsl(var(--color-bg-base));
-}
-
 .logout {
   display: flex;
   align-items: center;
@@ -44,7 +29,7 @@
 
 .panel {
   padding: var(--spacing-24);
-  background-color: hsl(var(--color-bg-surface));
+  background-color: hsl(var(--color-surface));
   border: 1px solid hsl(var(--color-border) / 0.5);
   border-radius: var(--radius-lg);
 }
