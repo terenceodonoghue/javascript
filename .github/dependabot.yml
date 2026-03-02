@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: monthly
     groups:
-      all:
+      javascript:
         patterns:
           - "*"
 
@@ -14,7 +14,7 @@ updates:
     schedule:
       interval: monthly
     groups:
-      all:
+      github-actions:
         patterns:
           - "*"
 
@@ -23,6 +23,6 @@ updates:
     schedule:
       interval: monthly
     groups:
-      all:
+      docker:
         patterns:
           - "*"
