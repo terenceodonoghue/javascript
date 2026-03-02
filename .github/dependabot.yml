@@ -4,6 +4,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    reviewers:
+      - "terenceodonoghue"
     groups:
       javascript:
         patterns:
@@ -13,6 +15,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    reviewers:
+      - "terenceodonoghue"
     groups:
       github-actions:
         patterns:
@@ -22,6 +26,8 @@ updates:
     directory: /apps/auth-web
     schedule:
       interval: monthly
+    reviewers:
+      - "terenceodonoghue"
     groups:
       docker:
         patterns:
